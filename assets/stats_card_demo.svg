@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="495" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="icon-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1f6feb"/>
+      <stop offset="100%" stop-color="#58a6ff"/>
+    </linearGradient>
+    <clipPath id="bar-clip">
+      <rect x="24" y="118" width="447" height="7" rx="3.5"/>
+    </clipPath>
+  </defs>
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #e6edf3; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 11px; fill: #8b949e; }
+    .stat-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-weight: 700; }
+    .stat-lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 600; fill: #8b949e; letter-spacing: 0.5px; }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bg)" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Logo Icon -->
+  <g transform="translate(24, 20)">
+    <rect width="24" height="24" rx="6" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
+    <path d="M13 3L6 13h5l-1 8 8-11h-5l1-7z" fill="url(#icon-grad)"/>
+  </g>
+
+  <!-- Header Text -->
+  <text x="56" y="33" class="title">CodeSync Pro <tspan font-weight="400" fill="#6e7681">Workstation</tspan></text>
+  <text x="56" y="47" class="subtitle">@developer • Competitive Programming Portfolio</text>
+
+  <!-- Live Status Badge -->
+  <g transform="translate(390, 21)">
+    <rect width="81" height="22" rx="11" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
+    <circle cx="11" cy="11" r="3.5" fill="#3fb950"/>
+    <text x="20" y="14.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#3fb950" letter-spacing="0.4px">AUTO-SYNC</text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="24" y1="58" x2="471" y2="58" stroke="#21262d" stroke-width="1"/>
+
+  <!-- 4 Primary Stat Columns -->
+  <g transform="translate(24, 68)">
+    <!-- Solved -->
+    <text x="0" y="20" class="stat-val" font-size="22" fill="#58a6ff">342</text>
+    <text x="0" y="34" class="stat-lbl">TOTAL SOLVED</text>
+
+    <!-- Streak -->
+    <text x="120" y="20" class="stat-val" font-size="22" fill="#f0883e">19<tspan font-size="13" font-weight="500" fill="#8b949e"> days</tspan></text>
+    <text x="120" y="34" class="stat-lbl">CURRENT STREAK</text>
+
+    <!-- AC Accuracy -->
+    <text x="245" y="20" class="stat-val" font-size="22" fill="#3fb950">82.4%</text>
+    <text x="245" y="34" class="stat-lbl">AC ACCURACY</text>
+
+    <!-- Submissions -->
+    <text x="360" y="20" class="stat-val" font-size="22" fill="#c9d1d9">415</text>
+    <text x="360" y="34" class="stat-lbl">SUBMISSIONS</text>
+  </g>
+
+  <!-- Segmented Progress Bar -->
+  <rect x="24" y="118" width="447" height="7" rx="3.5" fill="#21262d"/>
+  <g clip-path="url(#bar-clip)">
+    
+    <rect x="24" y="118" width="203.89473684210526" height="7" fill="#58a6ff"/>
+    <rect x="227.89473684210526" y="118" width="109.78947368421052" height="7" fill="#3fb950"/>
+    <rect x="337.6842105263158" y="118" width="67.96491228070175" height="7" fill="#d29922"/>
+    <rect x="405.64912280701753" y="118" width="47.05263157894736" height="7" fill="#f0883e"/>
+    <rect x="452.7017543859649" y="118" width="18.298245614035086" height="7" fill="#a371f7"/>
+    
+  </g>
+
+  <!-- Platform Solved Pills -->
+  
+    <g transform="translate(24, 137)">
+      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <circle cx="12" cy="13" r="3.5" fill="#58a6ff"/>
+      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CF</text>
+      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">156</text>
+    </g>
+    <g transform="translate(115, 137)">
+      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <circle cx="12" cy="13" r="3.5" fill="#3fb950"/>
+      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CSES</text>
+      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">84</text>
+    </g>
+    <g transform="translate(206, 137)">
+      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <circle cx="12" cy="13" r="3.5" fill="#d29922"/>
+      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">AC</text>
+      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">52</text>
+    </g>
+    <g transform="translate(297, 137)">
+      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <circle cx="12" cy="13" r="3.5" fill="#f0883e"/>
+      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">LC</text>
+      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">36</text>
+    </g>
+    <g transform="translate(388, 137)">
+      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <circle cx="12" cy="13" r="3.5" fill="#a371f7"/>
+      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">Toph</text>
+      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">14</text>
+    </g>
+
+  <!-- Footer Subtle Info -->
+  <text x="24" y="181" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#484f58">⚡ Auto-generated by CodeSync Pro</text>
+  <text x="471" y="181" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#484f58">Last Synced: Oct 11, 2026</text>
+</svg>

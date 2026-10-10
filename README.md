@@ -674,7 +674,7 @@ Turn your competitive programming grind into a live, interactive vector showcase
 Embed it directly on your personal **GitHub Profile README** (`github.com/<username>/<username>`) or inside your solutions portfolio.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/parthopaul69/Pri8899/main/codesync-stats.svg" alt="CodeSync Pro Dynamic Profile Stats Card" width="495" />
+  <img src="assets/stats_card_demo.svg" alt="CodeSync Pro Dynamic Profile Stats Card Demo" width="495" />
 </p>
 
 #### 📌 How to Embed on Your GitHub Profile README
