@@ -679,8 +679,18 @@ Embed it directly on your personal **GitHub Profile README** (`github.com/<usern
 
 #### 📌 How to Embed on Your GitHub Profile README
 
-Add this single line to your `README.md` on GitHub:
+Choose your preferred format (or copy directly from the **CodeSync Pro** Popup or Settings switcher):
 
+**Option 1: Centered HTML (Recommended — Pixel-Perfect Center Alignment)**
+```html
+<p align="center">
+  <a href="https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>">
+    <img src="https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/codesync-stats.svg" alt="CodeSync Pro Stats" width="495" />
+  </a>
+</p>
+```
+
+**Option 2: Standard Markdown**
 ```markdown
 [![CodeSync Pro Stats](https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/codesync-stats.svg)](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>)
 ```
