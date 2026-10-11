@@ -726,7 +726,7 @@ CodeSync Pro is built on the standard **Manifest V3** specification and fully te
 ### Step 1: Clone or Download the Repository
 
 ```bash
-git clone https://github.com/parthopaul69/CodeSync-Pro-Extension.git
+git clone https://github.com/Pri8899/CodeSync-Pro-Extension.git
 ```
 
 ### Step 2: Load Extension in Chrome / Edge
