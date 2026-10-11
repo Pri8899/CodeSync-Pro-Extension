@@ -4,6 +4,11 @@
       <stop offset="0%" stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
+    <linearGradient id="border-beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f6feb"><animate attributeName="stop-color" values="#1f6feb;#58a6ff;#3fb950;#1f6feb" dur="6s" repeatCount="indefinite"/></stop>
+      <stop offset="50%" stop-color="#58a6ff"><animate attributeName="stop-color" values="#58a6ff;#3fb950;#1f6feb;#58a6ff" dur="6s" repeatCount="indefinite"/></stop>
+      <stop offset="100%" stop-color="#3fb950"><animate attributeName="stop-color" values="#3fb950;#1f6feb;#58a6ff;#3fb950" dur="6s" repeatCount="indefinite"/></stop>
+    </linearGradient>
     <linearGradient id="icon-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#1f6feb"/>
       <stop offset="100%" stop-color="#58a6ff"/>
@@ -19,154 +24,138 @@
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"><animate attributeName="offset" values="-1; 1.5" dur="3s" repeatCount="indefinite"/></stop>
+      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.35"><animate attributeName="offset" values="-0.75; 1.75" dur="3s" repeatCount="indefinite"/></stop>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"><animate attributeName="offset" values="-0.5; 2" dur="3s" repeatCount="indefinite"/></stop>
+    </linearGradient>
   </defs>
   <style>
     .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #e6edf3; }
     .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 11px; fill: #8b949e; }
     .stat-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-weight: 700; }
     .stat-lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 600; fill: #8b949e; letter-spacing: 0.5px; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes pulseGlow { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
-    .card-border { animation: fadeIn 0.4s ease-out forwards; }
-    .header-group { animation: fadeIn 0.5s ease-out 0.1s both; }
-    .stat-group { animation: slideUp 0.4s ease-out both; }
-    .stat-g1 { animation-delay: 0.2s; }
-    .stat-g2 { animation-delay: 0.28s; }
-    .stat-g3 { animation-delay: 0.36s; }
-    .stat-g4 { animation-delay: 0.44s; }
-    .bar-track { animation: fadeIn 0.3s ease-out 0.5s both; }
-    .footer-text { animation: fadeIn 0.4s ease-out 0.9s both; }
-    .sync-dot { animation: pulseGlow 2s ease-in-out infinite; }
   </style>
 
   <!-- Card Background -->
-  <rect class="card-border" x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bg)" stroke="#30363d" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bg)" stroke="#30363d" stroke-width="1"/>
+  <!-- Top Animated Accent Beam -->
+  <path d="M10 0.5 L485 0.5" stroke="url(#border-beam)" stroke-width="2" stroke-linecap="round"/>
 
   <!-- Logo Icon -->
-  <g class="header-group" transform="translate(24, 20)">
+  <g transform="translate(24, 20)">
     <rect width="24" height="24" rx="6" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
-    <path d="M13 3L6 13h5l-1 8 8-11h-5l1-7z" fill="url(#icon-grad)"/>
+    <path d="M13 3L6 13h5l-1 8 8-11h-5l1-7z" fill="url(#icon-grad)">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
+    </path>
   </g>
 
   <!-- Header Text -->
-  <g class="header-group">
-    <text x="56" y="33" class="title">CodeSync Pro <tspan font-weight="400" fill="#6e7681">Workstation</tspan></text>
-    <text x="56" y="47" class="subtitle">@developer • Competitive Programming Portfolio</text>
-  </g>
+  <text x="56" y="33" class="title">CodeSync Pro <tspan font-weight="400" fill="#6e7681">Workstation</tspan></text>
+  <text x="56" y="47" class="subtitle">@developer • Competitive Programming Portfolio</text>
 
-  <!-- Live Status Badge -->
-  <g class="header-group" transform="translate(390, 21)">
-    <rect width="81" height="22" rx="11" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
-    <circle class="sync-dot" cx="11" cy="11" r="3.5" fill="#3fb950" filter="url(#glow)"/>
-    <text x="20" y="14.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#3fb950" letter-spacing="0.4px">AUTO-SYNC</text>
+  <!-- Live Status Badge with Continuous Radar Waves -->
+  <g transform="translate(382, 21)">
+    <rect width="89" height="22" rx="11" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
+    <!-- Expanding Radar Rings -->
+    <circle cx="12" cy="11" r="3.5" fill="none" stroke="#3fb950" stroke-width="1.2">
+      <animate attributeName="r" values="3.5;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="12" cy="11" r="3.5" fill="none" stroke="#3fb950" stroke-width="1">
+      <animate attributeName="r" values="3.5;9" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Center Glowing Dot -->
+    <circle cx="12" cy="11" r="3.5" fill="#3fb950" filter="url(#glow)">
+      <animate attributeName="r" values="3;4.2;3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="23" y="14.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#3fb950" letter-spacing="0.4px">AUTO-SYNC</text>
   </g>
 
   <!-- Separator -->
-  <line x1="24" y1="58" x2="471" y2="58" stroke="#21262d" stroke-width="1">
-    <animate attributeName="x2" values="24;471" dur="0.4s" begin="0.15s" fill="freeze"/>
-  </line>
+  <line x1="24" y1="58" x2="471" y2="58" stroke="#21262d" stroke-width="1"/>
 
   <!-- 4 Primary Stat Columns -->
   <g transform="translate(24, 68)">
-    <!-- Solved -->
-    <g class="stat-group stat-g1">
+    <g>
       <text x="0" y="20" class="stat-val" font-size="22" fill="#58a6ff">342</text>
       <text x="0" y="34" class="stat-lbl">TOTAL SOLVED</text>
     </g>
-
-    <!-- Streak -->
-    <g class="stat-group stat-g2">
-      <text x="120" y="20" class="stat-val" font-size="22" fill="#f0883e">19<tspan font-size="13" font-weight="500" fill="#8b949e"> days</tspan></text>
+    <g>
+      <text x="120" y="20" class="stat-val" font-size="22" fill="#f0883e">
+        <animate attributeName="fill" values="#f0883e;#ff9a3c;#f0883e" dur="2.5s" repeatCount="indefinite"/>
+        19<tspan font-size="13" font-weight="500" fill="#8b949e"> days</tspan>
+      </text>
       <text x="120" y="34" class="stat-lbl">CURRENT STREAK</text>
     </g>
-
-    <!-- AC Accuracy -->
-    <g class="stat-group stat-g3">
-      <text x="245" y="20" class="stat-val" font-size="22" fill="#3fb950">82.4%</text>
+    <g>
+      <text x="245" y="20" class="stat-val" font-size="22" fill="#3fb950">88.3%</text>
       <text x="245" y="34" class="stat-lbl">AC ACCURACY</text>
     </g>
-
-    <!-- Submissions -->
-    <g class="stat-group stat-g4">
-      <text x="360" y="20" class="stat-val" font-size="22" fill="#c9d1d9">415</text>
+    <g>
+      <text x="360" y="20" class="stat-val" font-size="22" fill="#c9d1d9">387</text>
       <text x="360" y="34" class="stat-lbl">SUBMISSIONS</text>
     </g>
   </g>
 
-  <!-- Segmented Progress Bar -->
-  <g class="bar-track">
+  <!-- Segmented Progress Bar with Light Shimmer -->
+  <g>
     <rect x="24" y="118" width="447" height="7" rx="3.5" fill="#21262d"/>
     <g clip-path="url(#bar-clip)">
-      
-      <rect x="24" y="118" width="0" height="7" fill="#58a6ff">
-        <animate attributeName="width" from="0" to="203.89473684210526" dur="0.5s" begin="0.55s" fill="freeze"/>
-      </rect>
-      <rect x="227.89473684210526" y="118" width="0" height="7" fill="#3fb950">
-        <animate attributeName="width" from="0" to="109.78947368421052" dur="0.5s" begin="0.6s" fill="freeze"/>
-      </rect>
-      <rect x="337.6842105263158" y="118" width="0" height="7" fill="#d29922">
-        <animate attributeName="width" from="0" to="67.96491228070175" dur="0.5s" begin="0.65s" fill="freeze"/>
-      </rect>
-      <rect x="405.64912280701753" y="118" width="0" height="7" fill="#f0883e">
-        <animate attributeName="width" from="0" to="47.05263157894736" dur="0.5s" begin="0.7s" fill="freeze"/>
-      </rect>
-      <rect x="452.7017543859649" y="118" width="0" height="7" fill="#a371f7">
-        <animate attributeName="width" from="0" to="18.298245614035086" dur="0.5s" begin="0.75s" fill="freeze"/>
-      </rect>
-      
+      <rect x="24" y="118" width="240" height="7" fill="#58a6ff"/>
+      <rect x="264" y="118" width="81" height="7" fill="#3fb950"/>
+      <rect x="345" y="118" width="63" height="7" fill="#d29922"/>
+      <rect x="408" y="118" width="47" height="7" fill="#f0883e"/>
+      <rect x="455" y="118" width="16" height="7" fill="#a371f7"/>
+      <!-- Flowing Light Wave -->
+      <rect x="24" y="118" width="447" height="7" fill="url(#shimmer)"/>
     </g>
   </g>
 
-  <!-- Platform Solved Pills -->
-  
-    <g transform="translate(24, 137)" opacity="0">
-      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-      <circle cx="12" cy="13" r="3.5" fill="#58a6ff">
-        <animate attributeName="r" values="0;3.5" dur="0.3s" begin="0.6s" fill="freeze"/>
-      </circle>
-      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CF</text>
-      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">156</text>
-      <animate attributeName="opacity" values="0;1" dur="0.35s" begin="0.5s" fill="freeze"/>
-    </g>
-    <g transform="translate(115, 137)" opacity="0">
-      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-      <circle cx="12" cy="13" r="3.5" fill="#3fb950">
-        <animate attributeName="r" values="0;3.5" dur="0.3s" begin="0.6799999999999999s" fill="freeze"/>
-      </circle>
-      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CSES</text>
-      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">84</text>
-      <animate attributeName="opacity" values="0;1" dur="0.35s" begin="0.58s" fill="freeze"/>
-    </g>
-    <g transform="translate(206, 137)" opacity="0">
-      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-      <circle cx="12" cy="13" r="3.5" fill="#d29922">
-        <animate attributeName="r" values="0;3.5" dur="0.3s" begin="0.76s" fill="freeze"/>
-      </circle>
-      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">AC</text>
-      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">52</text>
-      <animate attributeName="opacity" values="0;1" dur="0.35s" begin="0.66s" fill="freeze"/>
-    </g>
-    <g transform="translate(297, 137)" opacity="0">
-      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-      <circle cx="12" cy="13" r="3.5" fill="#f0883e">
-        <animate attributeName="r" values="0;3.5" dur="0.3s" begin="0.84s" fill="freeze"/>
-      </circle>
-      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">LC</text>
-      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">36</text>
-      <animate attributeName="opacity" values="0;1" dur="0.35s" begin="0.74s" fill="freeze"/>
-    </g>
-    <g transform="translate(388, 137)" opacity="0">
-      <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-      <circle cx="12" cy="13" r="3.5" fill="#a371f7">
-        <animate attributeName="r" values="0;3.5" dur="0.3s" begin="0.9199999999999999s" fill="freeze"/>
-      </circle>
-      <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">Toph</text>
-      <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">14</text>
-      <animate attributeName="opacity" values="0;1" dur="0.35s" begin="0.8200000000000001s" fill="freeze"/>
-    </g>
+  <!-- Platform Solved Pills with Breathing Indicator Dots -->
+  <g transform="translate(24, 137)">
+    <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="12" cy="13" r="3.5" fill="#58a6ff">
+      <animate attributeName="r" values="3;4.2;3" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CF</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">184</text>
+  </g>
+  <g transform="translate(115, 137)">
+    <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="12" cy="13" r="3.5" fill="#3fb950">
+      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CSES</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">62</text>
+  </g>
+  <g transform="translate(206, 137)">
+    <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="12" cy="13" r="3.5" fill="#d29922">
+      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">AC</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">48</text>
+  </g>
+  <g transform="translate(297, 137)">
+    <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="12" cy="13" r="3.5" fill="#f0883e">
+      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">LC</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">36</text>
+  </g>
+  <g transform="translate(388, 137)">
+    <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="12" cy="13" r="3.5" fill="#a371f7">
+      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">Toph</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">12</text>
+  </g>
 
   <!-- Footer Subtle Info -->
-  <text class="footer-text" x="24" y="181" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#484f58">⚡ Auto-generated by CodeSync Pro</text>
-  <text class="footer-text" x="471" y="181" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#484f58">Last Synced: Oct 11, 2026</text>
+  <text x="24" y="181" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#484f58">⚡ Auto-generated by CodeSync Pro</text>
+  <text x="471" y="181" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#484f58">Last Synced: Oct 11, 2026</text>
 </svg>
