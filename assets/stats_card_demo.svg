@@ -1,22 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="bg" x1="0" y1="0" x2="495" y2="195" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
-    <linearGradient id="border-beam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1f6feb"><animate attributeName="stop-color" values="#1f6feb;#58a6ff;#3fb950;#1f6feb" dur="6s" repeatCount="indefinite"/></stop>
-      <stop offset="50%" stop-color="#58a6ff"><animate attributeName="stop-color" values="#58a6ff;#3fb950;#1f6feb;#58a6ff" dur="6s" repeatCount="indefinite"/></stop>
-      <stop offset="100%" stop-color="#3fb950"><animate attributeName="stop-color" values="#3fb950;#1f6feb;#58a6ff;#3fb950" dur="6s" repeatCount="indefinite"/></stop>
+
+    <!-- Electric Flowing Border -->
+    <linearGradient id="border-flow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f6feb">
+        <animate attributeName="stop-color" values="#1f6feb; #58a6ff; #3fb950; #1f6feb" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="35%" stop-color="#30363d">
+        <animate attributeName="stop-color" values="#30363d; #1f6feb; #30363d; #30363d" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" stop-color="#58a6ff">
+        <animate attributeName="stop-color" values="#58a6ff; #3fb950; #1f6feb; #58a6ff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#30363d">
+        <animate attributeName="stop-color" values="#30363d; #30363d; #58a6ff; #30363d" dur="6s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
+
+    <!-- Ambient Aurora Glow -->
+    <radialGradient id="aurora" cx="80%" cy="15%" r="65%">
+      <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.14">
+        <animate attributeName="stop-opacity" values="0.06; 0.22; 0.06" dur="3.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Animated Lightning Icon Gradient -->
     <linearGradient id="icon-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1f6feb"/>
-      <stop offset="100%" stop-color="#58a6ff"/>
+      <stop offset="0%" stop-color="#1f6feb">
+        <animate attributeName="stop-color" values="#1f6feb; #58a6ff; #388bfd; #1f6feb" dur="2.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#58a6ff">
+        <animate attributeName="stop-color" values="#58a6ff; #79c0ff; #1f6feb; #58a6ff" dur="2.5s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
-    <linearGradient id="streak-grad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f0883e"/>
-      <stop offset="100%" stop-color="#f97316"/>
+
+    <!-- Living Flame Gradient for Streak -->
+    <linearGradient id="streak-flame" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f0883e">
+        <animate attributeName="stop-color" values="#f0883e; #ff7b72; #f97316; #f0883e" dur="2.2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#f97316">
+        <animate attributeName="stop-color" values="#f97316; #f0883e; #ff7b72; #f97316" dur="2.2s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
+
+    <!-- Continuous Laser Shimmer Beam across Progress Bar -->
+    <linearGradient id="laser-sweep" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#58a6ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-150%; 150%" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="-50%; 250%" dur="2.4s" repeatCount="indefinite"/>
+    </linearGradient>
+
     <clipPath id="bar-clip">
       <rect x="24" y="118" width="447" height="7" rx="3.5"/>
     </clipPath>
@@ -24,11 +68,6 @@
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"><animate attributeName="offset" values="-1; 1.5" dur="3s" repeatCount="indefinite"/></stop>
-      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.35"><animate attributeName="offset" values="-0.75; 1.75" dur="3s" repeatCount="indefinite"/></stop>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"><animate attributeName="offset" values="-0.5; 2" dur="3s" repeatCount="indefinite"/></stop>
-    </linearGradient>
   </defs>
   <style>
     .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #e6edf3; }
@@ -37,40 +76,42 @@
     .stat-lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 600; fill: #8b949e; letter-spacing: 0.5px; }
   </style>
 
-  <!-- Card Background -->
-  <rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bg)" stroke="#30363d" stroke-width="1"/>
-  <!-- Top Animated Accent Beam -->
-  <path d="M10 0.5 L485 0.5" stroke="url(#border-beam)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Card Background & Border -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bg)" stroke="url(#border-flow)" stroke-width="1.2"/>
+
+  <!-- Ambient Aurora Glow Overlay -->
+  <rect x="1" y="1" width="493" height="193" rx="10" fill="url(#aurora)" pointer-events="none"/>
 
   <!-- Logo Icon -->
   <g transform="translate(24, 20)">
     <rect width="24" height="24" rx="6" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
-    <path d="M13 3L6 13h5l-1 8 8-11h-5l1-7z" fill="url(#icon-grad)">
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
-    </path>
+    <path d="M13 3L6 13h5l-1 8 8-11h-5l1-7z" fill="url(#icon-grad)"/>
   </g>
 
   <!-- Header Text -->
-  <text x="56" y="33" class="title">CodeSync Pro <tspan font-weight="400" fill="#6e7681">Workstation</tspan></text>
-  <text x="56" y="47" class="subtitle">@developer • Competitive Programming Portfolio</text>
+  <g>
+    <text x="56" y="33" class="title">CodeSync Pro <tspan font-weight="400" fill="#6e7681">Workstation</tspan></text>
+    <text x="56" y="47" class="subtitle">@Pri8899 • Competitive Programming Portfolio</text>
+  </g>
 
-  <!-- Live Status Badge with Continuous Radar Waves -->
-  <g transform="translate(382, 21)">
-    <rect width="89" height="22" rx="11" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
-    <!-- Expanding Radar Rings -->
-    <circle cx="12" cy="11" r="3.5" fill="none" stroke="#3fb950" stroke-width="1.2">
-      <animate attributeName="r" values="3.5;9" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.9;0" dur="2s" repeatCount="indefinite"/>
+  <!-- Live Status Badge with Continuous Sonar Radar Rings -->
+  <g transform="translate(390, 21)">
+    <rect width="81" height="22" rx="11" fill="#1c2129" stroke="#30363d" stroke-width="1"/>
+    <!-- Core Green Dot -->
+    <circle cx="11" cy="11" r="3.5" fill="#3fb950" filter="url(#glow)"/>
+    <!-- Sonar Radar Ring 1 -->
+    <circle cx="11" cy="11" r="3.5" fill="none" stroke="#3fb950" stroke-width="1.6" opacity="0.8">
+      <animate attributeName="r" values="3.5; 10" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85; 0" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="1.6; 0.2" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="12" cy="11" r="3.5" fill="none" stroke="#3fb950" stroke-width="1">
-      <animate attributeName="r" values="3.5;9" dur="2s" begin="1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.9;0" dur="2s" begin="1s" repeatCount="indefinite"/>
+    <!-- Sonar Radar Ring 2 (Staggered) -->
+    <circle cx="11" cy="11" r="3.5" fill="none" stroke="#3fb950" stroke-width="1.6" opacity="0.8">
+      <animate attributeName="r" values="3.5; 10" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85; 0" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="1.6; 0.2" dur="2s" begin="1s" repeatCount="indefinite"/>
     </circle>
-    <!-- Center Glowing Dot -->
-    <circle cx="12" cy="11" r="3.5" fill="#3fb950" filter="url(#glow)">
-      <animate attributeName="r" values="3;4.2;3" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="23" y="14.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#3fb950" letter-spacing="0.4px">AUTO-SYNC</text>
+    <text x="20" y="14.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#3fb950" letter-spacing="0.4px">AUTO-SYNC</text>
   </g>
 
   <!-- Separator -->
@@ -78,70 +119,78 @@
 
   <!-- 4 Primary Stat Columns -->
   <g transform="translate(24, 68)">
+    <!-- Solved -->
     <g>
       <text x="0" y="20" class="stat-val" font-size="22" fill="#58a6ff">342</text>
       <text x="0" y="34" class="stat-lbl">TOTAL SOLVED</text>
     </g>
+
+    <!-- Streak (Animated Flame Gradient) -->
     <g>
-      <text x="120" y="20" class="stat-val" font-size="22" fill="#f0883e">
-        <animate attributeName="fill" values="#f0883e;#ff9a3c;#f0883e" dur="2.5s" repeatCount="indefinite"/>
-        19<tspan font-size="13" font-weight="500" fill="#8b949e"> days</tspan>
-      </text>
+      <text x="120" y="20" class="stat-val" font-size="22" fill="url(#streak-flame)">19<tspan font-size="13" font-weight="500" fill="#8b949e"> days</tspan></text>
       <text x="120" y="34" class="stat-lbl">CURRENT STREAK</text>
     </g>
+
+    <!-- AC Accuracy -->
     <g>
-      <text x="245" y="20" class="stat-val" font-size="22" fill="#3fb950">88.3%</text>
+      <text x="245" y="20" class="stat-val" font-size="22" fill="#3fb950">82.4%</text>
       <text x="245" y="34" class="stat-lbl">AC ACCURACY</text>
     </g>
+
+    <!-- Submissions -->
     <g>
-      <text x="360" y="20" class="stat-val" font-size="22" fill="#c9d1d9">387</text>
+      <text x="360" y="20" class="stat-val" font-size="22" fill="#c9d1d9">415</text>
       <text x="360" y="34" class="stat-lbl">SUBMISSIONS</text>
     </g>
   </g>
 
-  <!-- Segmented Progress Bar with Light Shimmer -->
+  <!-- Segmented Progress Bar + Laser Sweep -->
   <g>
     <rect x="24" y="118" width="447" height="7" rx="3.5" fill="#21262d"/>
     <g clip-path="url(#bar-clip)">
-      <rect x="24" y="118" width="240" height="7" fill="#58a6ff"/>
-      <rect x="264" y="118" width="81" height="7" fill="#3fb950"/>
-      <rect x="345" y="118" width="63" height="7" fill="#d29922"/>
-      <rect x="408" y="118" width="47" height="7" fill="#f0883e"/>
-      <rect x="455" y="118" width="16" height="7" fill="#a371f7"/>
-      <!-- Flowing Light Wave -->
-      <rect x="24" y="118" width="447" height="7" fill="url(#shimmer)"/>
+      <rect x="24" y="118" width="203.9" height="7" fill="#58a6ff"/>
+      <rect x="227.9" y="118" width="109.8" height="7" fill="#3fb950"/>
+      <rect x="337.7" y="118" width="68.0" height="7" fill="#d29922"/>
+      <rect x="405.7" y="118" width="47.1" height="7" fill="#f0883e"/>
+      <rect x="452.8" y="118" width="18.2" height="7" fill="#a371f7"/>
+      <!-- Continuous Laser Shimmer Beam across Bar -->
+      <rect x="24" y="118" width="447" height="7" fill="url(#laser-sweep)"/>
     </g>
   </g>
 
-  <!-- Platform Solved Pills with Breathing Indicator Dots -->
+  <!-- Platform Solved Pills (Breathing Indicator Dots) -->
   <g transform="translate(24, 137)">
     <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
     <circle cx="12" cy="13" r="3.5" fill="#58a6ff">
-      <animate attributeName="r" values="3;4.2;3" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3.0; 4.3; 3.0" dur="2.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75; 1; 0.75" dur="2.0s" repeatCount="indefinite"/>
     </circle>
     <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CF</text>
-    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">184</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">156</text>
   </g>
   <g transform="translate(115, 137)">
     <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
     <circle cx="12" cy="13" r="3.5" fill="#3fb950">
-      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3.0; 4.3; 3.0" dur="2.25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75; 1; 0.75" dur="2.25s" repeatCount="indefinite"/>
     </circle>
     <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">CSES</text>
-    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">62</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">84</text>
   </g>
   <g transform="translate(206, 137)">
     <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
     <circle cx="12" cy="13" r="3.5" fill="#d29922">
-      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3.0; 4.3; 3.0" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75; 1; 0.75" dur="2.5s" repeatCount="indefinite"/>
     </circle>
     <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">AC</text>
-    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">48</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">52</text>
   </g>
   <g transform="translate(297, 137)">
     <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
     <circle cx="12" cy="13" r="3.5" fill="#f0883e">
-      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3.0; 4.3; 3.0" dur="2.75s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75; 1; 0.75" dur="2.75s" repeatCount="indefinite"/>
     </circle>
     <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">LC</text>
     <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">36</text>
@@ -149,10 +198,11 @@
   <g transform="translate(388, 137)">
     <rect width="83" height="26" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
     <circle cx="12" cy="13" r="3.5" fill="#a371f7">
-      <animate attributeName="r" values="3;4.2;3" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3.0; 4.3; 3.0" dur="3.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75; 1; 0.75" dur="3.0s" repeatCount="indefinite"/>
     </circle>
     <text x="21" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8b949e">Toph</text>
-    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">12</text>
+    <text x="74" y="17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#e6edf3">14</text>
   </g>
 
   <!-- Footer Subtle Info -->
