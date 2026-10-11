@@ -30,4 +30,4 @@ Since all data is stored locally in your browser, you can permanently delete all
 
 ## 4. Contact
 If you have any questions about this Privacy Policy, you can open an issue on our GitHub repository:
-[https://github.com/parthopaul69/CodeSync-Pro-Extension/issues](https://github.com/parthopaul69/CodeSync-Pro-Extension/issues)
+[https://github.com/Pri8899/CodeSync-Pro-Extension/issues](https://github.com/Pri8899/CodeSync-Pro-Extension/issues)
