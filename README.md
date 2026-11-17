@@ -13,8 +13,10 @@
 
 <p align="center">
   <a href="https://developer.chrome.com/docs/extensions/mv3/intro/"><img src="https://img.shields.io/badge/Manifest-V3-2f81f7?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Manifest V3" /></a>
+  <a href="https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.4.0"><img src="https://img.shields.io/badge/Version-v4.4.0-3b82f6?style=for-the-badge" alt="Version v4.4.0" /></a>
   <a href="https://www.google.com/chrome/"><img src="https://img.shields.io/badge/Chrome-110%2B-4285f4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Google Chrome" /></a>
   <a href="https://www.microsoft.com/edge"><img src="https://img.shields.io/badge/Edge-110%2B-0078d7?style=for-the-badge&logo=microsoft-edge&logoColor=white" alt="Microsoft Edge" /></a>
+  <a href="https://brave.com/"><img src="https://img.shields.io/badge/Brave-Supported-fb542b?style=for-the-badge&logo=brave&logoColor=white" alt="Brave Browser" /></a>
   <a href="https://microsoft.github.io/monaco-editor/"><img src="https://img.shields.io/badge/Editor-Monaco%20(VS%20Code)-0ea5e9?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="Monaco Editor" /></a>
   <a href="https://github.com"><img src="https://img.shields.io/badge/Sync-CF%20%7C%20AC%20%7C%20CSES%20%7C%20LC%20%7C%20TP-2f81f7?style=for-the-badge&logo=github&logoColor=white" alt="Platforms" /></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="License MIT" /></a>
@@ -25,6 +27,7 @@
 ## 📖 Table of Contents
 
 - [🌟 Overview](#-overview)
+- [🚀 What's New in v4.4.0](#-whats-new-in-v440)
 - [🖼️ Visual UI Tour & Complete Screenshot Directory](#️-visual-ui-tour--complete-screenshot-directory)
   - [Asset Manifest & Name Directory](#asset-manifest--name-directory)
   - [1. Monaco CP Workstation & Problem-Solving Studio](#1-monaco-cp-workstation--problem-solving-studio)
@@ -36,41 +39,55 @@
     - [F. LeetCode-Style Problem Statement Viewer (`ide_problem_statement_viewer.png`)](#f-leetcode-style-problem-statement-viewer-ide_problem_statement_viewerpng)
     - [G. Problem Panel in Standalone Scratchpad Mode (`ide_problem_panel_standalone.png`)](#g-problem-panel-in-standalone-scratchpad-mode-ide_problem_panel_standalonepng)
     - [H. CPH Multi-Testcase Runner & Accepted Banner (`ide_testcase_accepted_verdict.png`)](#h-cph-multi-testcase-runner--accepted-banner-ide_testcase_accepted_verdictpng)
-  - [2. Extension Popup Dashboard & Live Analytics](#2-extension-popup-dashboard--live-analytics)
+  - [2. Codeforces Problemset Persistent Filter & Tags Accordion](#2-codeforces-problemset-persistent-filter--tags-accordion)
+    - [A. Seamless Settings Integration & Single Rating Selector](#a-seamless-settings-integration--single-rating-selector)
+    - [B. Collapsible 37-Tag Accordion with Real-Time Search](#b-collapsible-37-tag-accordion-with-real-time-search)
+    - [C. Floating Glassmorphic Control & Active Status Banner](#c-floating-glassmorphic-control--active-status-banner)
+  - [3. Animated Multi-Platform Portfolio Engine & Profile Suite](#3-animated-multi-platform-portfolio-engine--profile-suite)
+    - [A. Dynamic GitHub Stats Card (`assets/codesync-stats.svg`)](#a-dynamic-github-stats-card-assetscodesync-statssvg)
+    - [B. 1000px Platform & Category Overview Dashboard (`assets/overview.svg`)](#b-1000px-platform--category-overview-dashboard-assetsoverviewsvg)
+    - [C. 5 Interactive Clickable Profile Cards (`assets/*.svg`)](#c-5-interactive-clickable-profile-cards-assetssvg)
+    - [D. Structured Solved Problems Browse Index Table](#d-structured-solved-problems-browse-index-table)
+  - [4. Extension Popup Dashboard & Live Analytics](#4-extension-popup-dashboard--live-analytics)
     - [A. Popup Quick Navigation (`popup_navigation_buttons.png`)](#a-popup-quick-navigation-popup_navigation_buttonspng)
     - [B. Honest Streak & Platform Solves Donut (`popup_streak_and_donut.png`)](#b-honest-streak--platform-solves-donut-popup_streak_and_donutpng)
     - [C. 30-Day Activity Graph & Quick Metrics (`popup_activity_graph_metrics.png`)](#c-30-day-activity-graph--quick-metrics-popup_activity_graph_metricspng)
     - [D. Smart Sync Multi-Platform Center (`popup_smart_sync_center.png`)](#d-smart-sync-multi-platform-center-popup_smart_sync_centerpng)
-  - [3. Global Contest Hub & Codeforces Upsolve Radar](#3-global-contest-hub--codeforces-upsolve-radar)
+  - [5. Global Contest Hub & Codeforces Upsolve Radar](#5-global-contest-hub--codeforces-upsolve-radar)
     - [A. Global Contest Hub Schedule (`contest_hub_global_schedule.png`)](#a-global-contest-hub-schedule-contest_hub_global_schedulepng)
     - [B. Codeforces Upsolve Radar (`upsolve_radar_challenges.png`)](#b-codeforces-upsolve-radar-upsolve_radar_challengespng)
-  - [4. Extension Settings & Customization Studio](#4-extension-settings--customization-studio)
+  - [6. Extension Settings & Customization Studio](#6-extension-settings--customization-studio)
     - [A. GitHub Repository Integration (`settings_github_integration.png`)](#a-github-repository-integration-settings_github_integrationpng)
     - [B. Editor Preferences & Themes (`settings_preferences.png`)](#b-editor-preferences--themes-settings_preferencespng)
     - [C. Starter Templates & Boilerplates (`settings_starter_templates.png`)](#c-starter-templates--boilerplates-settings_starter_templatespng)
     - [D. Remote Code Execution Engine (`settings_code_execution.png`)](#d-remote-code-execution-engine-settings_code_executionpng)
-    - [E. Contest Hub Filters & Reminders (`settings_contest_hub_filters.png`)](#e-contest-hub-filters--reminders-settings_contest_hub_filterspng)
-    - [F. Dynamic GitHub Profile README Stats Card](#f-dynamic-github-profile-readme-stats-card)
-  - [5. Automated GitHub Synchronization Architecture](#5-automated-github-synchronization-architecture)
+    - [E. Contest Hub Platform Filters (`settings_contest_hub_filters.png`)](#e-contest-hub-platform-filters-settings_contest_hub_filterspng)
+  - [7. Automated GitHub Synchronization Hierarchy](#7-automated-github-synchronization-hierarchy)
     - [A. Repository Root Directory Architecture (`github_repo_structure.png`)](#a-repository-root-directory-architecture-github_repo_structurepng)
     - [B. Codeforces Division Hierarchy (`github_codeforces_divisions.png`)](#b-codeforces-division-hierarchy-github_codeforces_divisionspng)
-    - [C. Synced Solution Folder & Markdown Archive (`github_synced_problem_folder.png`)](#c-synced-solution-folder--markdown-archive-github_synced_problem_folderpng)
+    - [C. CSES 6-Category Hierarchy](#c-cses-6-category-hierarchy)
+    - [D. Synced Problem Directory & Markdown Archive (`github_synced_problem_folder.png`)](#d-synced-problem-directory--markdown-archive-github_synced_problem_folderpng)
 - [🎛️ Exhaustive Button & Control Directory](#️-exhaustive-button--control-directory)
   - [A. Monaco IDE Workstation Buttons & Controls](#a-monaco-ide-workstation-buttons--controls)
-  - [B. Contest Hub Controls & Calendar Buttons](#b-contest-hub-controls--calendar-buttons)
-  - [C. Upsolve Radar Controls & Problem Launcher](#c-upsolve-radar-controls--problem-launcher)
-  - [D. Extension Popup Dashboard Controls](#d-extension-popup-dashboard-controls)
-  - [E. Settings & Customization Controls](#e-settings--customization-controls)
+  - [B. Codeforces Problemset Filter & Floating Controls](#b-codeforces-problemset-filter--floating-controls)
+  - [C. Contest Hub Controls & Calendar Buttons](#c-contest-hub-controls--calendar-buttons)
+  - [D. Upsolve Radar Controls & Problem Launcher](#d-upsolve-radar-controls--problem-launcher)
+  - [E. Extension Popup Dashboard Controls](#e-extension-popup-dashboard-controls)
+  - [F. Settings & Customization Controls](#f-settings--customization-controls)
 - [🔬 Core Engineering Deep-Dives](#-core-engineering-deep-dives)
-  - [1. 30-Day Activity Graph & Dual-Series Analytics Engine](#1-30-day-activity-graph--dual-series-analytics-engine)
-  - [2. Honest Streak & Daily Momentum Engine](#2-honest-streak--daily-momentum-engine)
-  - [3. Difficulty Distribution Donut & Category Geometry](#3-difficulty-distribution-donut--category-geometry)
-  - [4. Intelligent C++ Formatter with AST & Literal Shielding](#4-intelligent-c-formatter-with-ast--literal-shielding)
-  - [5. CPH Multi-Testcase Runner & Telemetry](#5-cph-multi-testcase-runner--telemetry)
-  - [6. Automated GitHub Synchronization & Repository Hierarchy](#6-automated-github-synchronization--repository-hierarchy)
-  - [7. Judge DOM Scraping & One-Click Auto-Submit Bridges](#7-judge-dom-scraping--one-click-auto-submit-bridges)
-  - [8. Dynamic GitHub Profile README Stats Card Engine](#8-dynamic-github-profile-readme-stats-card-engine)
-- [🌐 Browser Compatibility (Google Chrome & Microsoft Edge)](#-browser-compatibility-google-chrome--microsoft-edge)
+  - [1. Atomic 3-Commit Git Database Trees API Architecture](#1-atomic-3-commit-git-database-trees-api-architecture)
+  - [2. Animated Multi-Platform Portfolio Engine & Vector SMIL Geometry](#2-animated-multi-platform-portfolio-engine--vector-smil-geometry)
+  - [3. Codeforces Problemset Filter with Live MutationObserver & Bi-Directional Storage](#3-codeforces-problemset-filter-with-live-mutationobserver--bi-directional-storage)
+  - [4. CSES 6-Category Classification & DataTransfer Form Injection](#4-cses-6-category-classification--datatransfer-form-injection)
+  - [5. 30-Day Activity Graph & Dual-Series Analytics Engine](#5-30-day-activity-graph--dual-series-analytics-engine)
+  - [6. Honest Streak & Daily Momentum Engine](#6-honest-streak--daily-momentum-engine)
+  - [7. Difficulty Distribution Donut & Category Geometry](#7-difficulty-distribution-donut--category-geometry)
+  - [8. Intelligent C++ Formatter with AST & Literal Shielding](#8-intelligent-c-formatter-with-ast--literal-shielding)
+  - [9. CPH Multi-Testcase Runner & Telemetry](#9-cph-multi-testcase-runner--telemetry)
+  - [10. Automated GitHub Synchronization & Repository Hierarchy](#10-automated-github-synchronization--repository-hierarchy)
+  - [11. Judge DOM Scraping & One-Click Auto-Submit Bridges](#11-judge-dom-scraping--one-click-auto-submit-bridges)
+  - [12. Security Architecture, Local-First Storage & AST Obfuscation](#12-security-architecture-local-first-storage--ast-obfuscation)
+- [🌐 Browser Compatibility (Google Chrome, Microsoft Edge, Brave)](#-browser-compatibility-google-chrome-microsoft-edge-brave)
 - [🚀 Installation & Quick Start Guide](#-installation--quick-start-guide)
 - [⚙️ Configuration & GitHub Setup](#️-configuration--github-setup)
 - [⌨️ Keyboard Shortcuts Reference](#️-keyboard-shortcuts-reference)
@@ -83,7 +100,7 @@
 
 ## 🌟 Overview
 
-**CodeSync Pro** is a modern, all-in-one browser workstation and automated GitHub portfolio synchronization engine built as a native Manifest V3 extension for **Google Chrome** and **Microsoft Edge**.
+**CodeSync Pro** is a modern, all-in-one browser workstation and automated GitHub portfolio synchronization engine built as a native Manifest V3 extension for **Google Chrome**, **Microsoft Edge**, and **Brave**.
 
 Traditionally, competitive programmers have had to juggle multiple disconnected tools: solving in one browser tab, copying test cases into local terminal files, compiling code manually, checking separate contest calendar websites, and maintaining an offline Git repository.
 
@@ -99,8 +116,49 @@ CodeSync Pro bridges this entire workflow into a cohesive, high-performance work
 │  • CPH multi-testcases  │  • Codeforces Upsolve    │  • Dual-series 30-day activity    │
 │  • AST-safe C++ format  │  • Live countdowns       │  • Honest streak tracker          │
 │  • 1-click submission   │  • Google Cal & .ICS     │  • Category difficulty donut      │
-└─────────────────────────┴──────────────────────────┴───────────────────────────────────┘
+├─────────────────────────┴──────────────────────────┴───────────────────────────────────┤
+│                          AUTOMATED GITHUB PORTFOLIO SUITE                              │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│  • Atomic 3-Commit Git Trees Engine (ques: Statement, code: Solution, stats: Portfolio)│
+│  • Animated Portfolio Showcase (codesync-stats.svg, overview.svg, 5 profile cards)    │
+│  • Clickable Solved Problems Browse Index with direct problem site URLs and code links │
+│  • Automatic division & category archiving across CF, CSES, AtCoder, LeetCode, Toph  │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 🚀 What's New in v4.4.0
+
+### 1. Animated Multi-Platform Portfolio Engine & Profile Suite
+- **Complete Vector Portfolio Suite:** Generates, animates, and synchronizes a full interactive vector portfolio suite inside your solutions repository (`assets/` directory) via a single atomic Git commit:
+  - **Dynamic Stats Card (`assets/codesync-stats.svg`):** Animated card featuring live streak flame, AC accuracy %, submissions volume, and continuous laser sweep.
+  - **Platform & Category Overview Dashboard (`assets/overview.svg`):** 1000px wide animated dark dashboard displaying cumulative progress tracks across **Codeforces**, **CSES**, **Toph**, **AtCoder**, and **LeetCode**, with sub-bars for Codeforces Divisions (Div. 1–4 + Others) and CSES 6-Category classification.
+  - **5 Interactive Clickable Profile Cards:** Standalone 200×270 dark cards for Codeforces, LeetCode, AtCoder, CSES, and Toph. Pure vector logos, laser sweep beams, radial glowing halos, handles (`@Pri8899`), solution counters, and 1-click links to your live judge profiles.
+  - **Structured Solved Problems Browse Index Table:** High-contrast markdown table in `README.md` cataloging your entire solution history with clickable problem names and codes pointing directly to live problemset URLs on the platform, category badges, language detection, and direct links to solution code files in your repository.
+
+### 2. Atomic 3-Commit Git Database Trees API Architecture
+- **Strictly 3 Commits per Solve:** Guaranteed uniform GitHub commit history on every accepted submission:
+  - **Commit #1 (`ques:`):** Problem statement, constraints, time/memory limits, and sample testcases.
+  - **Commit #2 (`code:`):** Formatted source code, verdict details, execution time, and memory metrics.
+  - **Commit #3 (`stats:`):** Atomic update of all 7 portfolio SVGs and repository `README.md` bundled simultaneously into a single tree update via the GitHub Git Database Trees API (`/git/trees` → `/git/commits` → `/git/refs/heads/main`).
+- **Zero Redundant Commits:** Eliminates extra debounced commits or fragmented file updates.
+
+### 3. Full CSES 6-Category Classification & Extension-Wide Branding
+- **6-Category Classification:** Dedicated categorization for CSES Problem Set: **Introductory Problems**, **Sorting & Searching**, **Dynamic Programming**, **Graphs & Trees**, **Math & Queries**, and **Others / Advanced**.
+- **Extension Branding:** Updated subtitle across all headers and popups to `CF · AC · LC · CSES · TP → GitHub`.
+- **Settings Customization:** Added CSES handle and user profile configuration in Extension Settings.
+
+### 4. Codeforces Problemset Persistent Filter & Tags Accordion
+- **Single Rating Selector (800 – 3500):** Practice exact problem rating targets across all 28 individual Codeforces ratings with quick rating jump pills (`All`, `800`, `1000`, `1200`, `1400`, `1600`, `1800`, `2000`, `2200`, `2400`).
+- **Collapsible 37-Tag Accordion:** Filter by any of the 37 official Codeforces tags with real-time tag search, live selected count badge, and flexible matching modes (Match ANY vs Match ALL).
+- **Practice Controls:** 1-click "Hide solved problems" and "Include unrated problems" toggles.
+- **Floating Controls & Banner:** Glassmorphic floating button with live status indicator and match counter badge, plus a 32px slim status banner above the Codeforces problem table.
+- **Universal Storage Sync:** Live `MutationObserver` on Codeforces problem tables keeps floating controls and extension settings 100% synchronized across tabs.
+
+### 5. Production Compilation & Client-Side Obfuscation
+- **Protected Codebase:** All extension scripts compiled via an AST-based string-array encoding and control-flow pipeline targeting `browser-no-eval` for complete Manifest V3 compliance and tamper-proof execution.
+- **Clean Distribution Package:** Packaged as `CodeSync Pro.zip` with zero OS metadata files and direct extraction into `CodeSync Pro/`.
 
 ---
 
@@ -110,21 +168,24 @@ Every single screenshot asset in this project represents an authentic, real-worl
 
 ### Asset Manifest & Name Directory
 
-The table below catalogs every graphic asset utilized in this documentation:
-
 | Asset Filename | Visual Name / Title | Description & Context |
 | :--- | :--- | :--- |
 | `assets/logo.png` | **Official Glowing Emblem** | Circular high-resolution emblem with electric neon accents and multi-platform judge integration. |
+| `assets/logos/AC.png` | **AtCoder Logo Asset** | High-resolution optimized platform logo for AtCoder. |
+| `assets/logos/CF.png` | **Codeforces Logo Asset** | High-resolution optimized platform logo for Codeforces. |
+| `assets/logos/CSES.png` | **CSES Logo Asset** | High-resolution optimized platform logo for CSES. |
+| `assets/logos/LC.png` | **LeetCode Logo Asset** | High-resolution optimized platform logo for LeetCode. |
+| `assets/logos/Toph.png` | **Toph Logo Asset** | High-resolution optimized platform logo for Toph. |
 | `assets/ide_full_workspace.png` | **Full Monaco CP Workstation** | Panoramic 3-column competitive programming studio. |
 | `assets/ide_action_buttons.png` | **IDE Primary Action Controls** | Tactile Compile, Test (Run), and Submit control group. |
 | `assets/ide_toolbar_controls.png` | **IDE Standards & Toolbar** | Language standard, Monaco theme, Format, and Snippet selectors. |
 | `assets/ide_language_selector_dropdown.png` | **Multi-Language Selector Dropdown** | Dropdown menu displaying all 11 native compiler standards (C++23/20/17, Python 3.13/3.12, Java 21/17, Rust 1.85, Go 1.23, JS Node 22, Kotlin 2.1, C# .NET 8). |
 | `assets/ide_monaco_editor.png` | **Monaco Code Editor Panel** | Authentic VS Code Dark+ engine with full AST syntax colors. |
 | `assets/ide_problem_statement_viewer.png` | **Problem Statement Viewer** | LeetCode-style problem layout with difficulty pill and styled examples. |
-| `assets/ide_problem_panel_standalone.png` | **Problem Panel Standalone Mode** | Clean scratchpad interface with instant jump links to 4 judges. |
+| `assets/ide_problem_panel_standalone.png` | **Problem Panel Standalone Mode** | Clean scratchpad interface with instant jump links to 5 judges. |
 | `assets/ide_testcase_accepted_verdict.png`| **CPH Testcase Accepted Verdict** | Celebratory Accepted banner and multi-testcase runner cards. |
 | `assets/popup_navigation_buttons.png` | **Popup Quick Navigation** | Topbar navigation pills for IDE and Contest Hub. |
-| `assets/popup_streak_and_donut.png` | **Honest Streak & Solves Donut** | 7-day momentum row with honest checks/crosses and 308-solve donut. |
+| `assets/popup_streak_and_donut.png` | **Honest Streak & Solves Donut** | 7-day momentum row with honest checks/crosses and cumulative solves donut. |
 | `assets/popup_activity_graph_metrics.png`| **30-Day Activity Graph & Metrics** | Dual-series SVG line chart and live stats cards. |
 | `assets/popup_smart_sync_center.png` | **Smart Sync Multi-Platform Center**| Unsynced submission scanner and 1-click GitHub commit dispatcher. |
 | `assets/contest_hub_global_schedule.png` | **Global Contest Hub Schedule** | Universal calendar with 31+ competitions and platform filter pills. |
@@ -134,9 +195,10 @@ The table below catalogs every graphic asset utilized in this documentation:
 | `assets/settings_starter_templates.png` | **Starter Templates & Boilerplates**| Pre-configured CP templates for C++, Python, and Java. |
 | `assets/settings_code_execution.png` | **Remote Code Execution Engine** | Paiza.IO remote compilation sandbox and timeout configuration. |
 | `assets/settings_contest_hub_filters.png`| **Contest Hub Platform Filters** | Multi-platform checkboxes, CLIST integration, and reminder toggles. |
-| `assets/github_repo_structure.png` | **GitHub Repository Root Hierarchy**| Structured portfolio showing AtCoder, Codeforces, and LeetCode folders. |
+| `assets/github_repo_structure.png` | **GitHub Repository Root Hierarchy**| Structured portfolio showing AtCoder, Codeforces, CSES, LeetCode, and Toph folders. |
 | `assets/github_codeforces_divisions.png`| **Codeforces Division Hierarchy** | Auto-categorized Div. 1, Div. 2, Div. 3, Div. 4, and Others folders. |
 | `assets/github_synced_problem_folder.png`| **Synced Problem Directory** | Individual challenge directory with source code and auto-generated README. |
+| `assets/stats_card_demo.svg` | **Dynamic Stats Card Demo** | High-resolution animated profile card demonstrating laser sweep and streak flame. |
 
 ---
 
@@ -151,7 +213,7 @@ The heart of CodeSync Pro is its full-screen competitive programming studio feat
 </p>
 
 The full workstation view demonstrates the integrated 3-column architecture:
-- **Left Panel (Problem Statement):** Displays extracted problem statements with mathematical equations, constraints, and sample tests. In standalone mode, offers quick jump buttons to Codeforces, AtCoder, LeetCode, and Toph.
+- **Left Panel (Problem Statement):** Displays extracted problem statements with mathematical equations, constraints, and sample tests. In standalone mode, offers quick jump buttons to Codeforces, AtCoder, CSES, LeetCode, and Toph.
 - **Center Panel (Monaco Code Editor):** Monaco Code Editor with authentic token colors, smart STL completions, and custom font sizing.
 - **Right Panel (CPH Testcase Runner):** Multi-testcase runner with execution time in milliseconds, memory telemetry, custom test addition, and the celebratory **TESTCASE ACCEPTED** verdict banner.
 
@@ -243,7 +305,7 @@ Extracted problem statements are rendered with clean modern typography:
 
 When launched independently without an active problem tab:
 - **No Problem Active State:** Clear guidance explaining how to link active judge tabs.
-- **Quick Jump Buttons:** One-click launcher buttons to open problem sets for **Codeforces**, **AtCoder**, **LeetCode**, and **Toph** in new tabs.
+- **Quick Jump Buttons:** One-click launcher buttons to open problem sets for **Codeforces**, **AtCoder**, **CSES**, **LeetCode**, and **Toph** in new tabs.
 - **Auto-Sync Listener:** Automatically detects problem tab navigation and prompts for instant statement extraction.
 
 ---
@@ -261,7 +323,76 @@ Comprehensive local testing engine inspired by Competitive Programming Helper (C
 
 ---
 
-### 2. Extension Popup Dashboard & Live Analytics
+### 2. Codeforces Problemset Persistent Filter & Tags Accordion
+
+CodeSync Pro features a persistent filtering engine integrated directly inside Codeforces settings and on `codeforces.com/problemset`.
+
+#### A. Seamless Settings Integration & Single Rating Selector
+- **Embedded in Codeforces Settings:** Located right inside the Codeforces card in Extension Settings (`options.html`), preserving logical grouping without extra clutter.
+- **Pure Single Rating Selector (800 – 3500):** Practice exact problem rating targets across all 28 individual Codeforces ratings: `800`, `900`, `1000`, `1100`, `1200`, `1300`, `1400`, `1500`, `1600`, `1700`, `1800`, `1900`, `2000`, `2100`, `2200`, `2300`, `2400`, `2500`, `2600`, `2700`, `2800`, `2900`, `3000`, `3100`, `3200`, `3300`, `3400`, `3500`.
+- **Quick Rating Jump Pills:** Fast 1-click jump buttons (`All`, `800`, `1000`, `1200`, `1400`, `1600`, `1800`, `2000`, `2200`, `2400`).
+- **Practice Exclusively Unsolved Problems:** 1-click toggle automatically detects accepted problems on Codeforces and submissions already synced to GitHub.
+- **Include Unrated Problems Toggle:** Choose whether unrated/gym challenges appear in your feed.
+
+#### B. Collapsible 37-Tag Accordion with Real-Time Search
+- **Optional & Separate:** Tags are tucked neatly inside an expandable accordion (`Filter by Tags (Optional) ▾`).
+- **All 37 Official Tags Supported:** `implementation`, `math`, `greedy`, `brute force`, `constructive algorithms`, `dp`, `data structures`, `graphs`, `dfs and similar`, `trees`, `sortings`, `binary search`, `two pointers`, `strings`, `number theory`, `combinatorics`, `geometry`, `bitmasks`, `probabilities`, `shortest paths`, `divide and conquer`, `dsu`, `flows`, `graph matchings`, `matrices`, `ternary search`, `meet-in-the-middle`, `expression parsing`, `hashing`, `string suffix structures`, `fft`, `chinese remainder theorem`, `2-sat`, `games`, `interactive`, `schedules`, and `*special`.
+- **Live Search & Badge Counter:** Instant tag search, one-click Clear, and a live counter badge displaying selected tags when collapsed.
+- **Flexible Matching Modes:** Switch easily between **Match ANY (OR)** and **Match ALL (AND)**.
+
+#### C. Floating Glassmorphic Control & Active Status Banner
+- **Floating Control Button:** Sleek button (`🎯 Filter Problems`) on `codeforces.com/problemset` with a live status dot and match counter (`visible / total`).
+- **32px Status Banner:** Compact banner above the table showing active filter criteria with instant "Edit Filter" and "Clear" shortcuts.
+- **Live MutationObserver:** Automatically reapplies filters during table sorting, pagination, or dynamic updates.
+
+---
+
+### 3. Animated Multi-Platform Portfolio Engine & Profile Suite
+
+Transform your solutions repository (`github.com/<username>/<repo>`) into a self-updating, high-resolution vector portfolio!
+
+```
+Pri8899/CP/
+├── README.md                          <-- Auto-generated portfolio showcase
+├── assets/
+│   ├── codesync-stats.svg             <-- Dynamic live stats card
+│   ├── overview.svg                   <-- 1000px multi-platform & division/category dashboard
+│   ├── codeforces.svg                 <-- Clickable animated Codeforces profile badge
+│   ├── leetcode.svg                   <-- Clickable animated LeetCode profile badge
+│   ├── atcoder.svg                    <-- Clickable animated AtCoder profile badge
+│   ├── cses.svg                       <-- Clickable animated CSES profile badge
+│   └── toph.svg                       <-- Clickable animated Toph profile badge
+├── Codeforces/
+├── CSES/
+├── LeetCode/
+├── AtCoder/
+└── Toph/
+```
+
+#### A. Dynamic GitHub Stats Card (`assets/codesync-stats.svg`)
+- High-contrast 495×195 SVG card featuring real-time rank, active streak flame animation, overall AC accuracy %, total submissions count, and proportional multi-platform progress tracks.
+- Continuous laser sweep animation running across the card top and progress tracks.
+
+#### B. 1000px Platform & Category Overview Dashboard (`assets/overview.svg`)
+- High-resolution 1000px wide animated dark dashboard (`#0d1117`) with glowing top laser sweep.
+- Cumulative progress bars across **Codeforces** (`#3b82f6`), **CSES** (`#10b981`), **Toph** (`#f43f5e`), **AtCoder** (`#e2e8f0`), and **LeetCode** (`#f59e0b`).
+- **Codeforces by Division:** Multi-segment horizontal bar tracking **Div. 1**, **Div. 2**, **Div. 3**, **Div. 4**, and **Others** (with dual-credit support for combined Div. 1+2 rounds).
+- **CSES by Category:** Multi-segment horizontal bar tracking all 6 official CSES categories: **Introductory Problems**, **Sorting & Searching**, **Dynamic Programming**, **Graphs & Trees**, **Math & Queries**, and **Others / Advanced**.
+
+#### C. 5 Interactive Clickable Profile Cards (`assets/*.svg`)
+- Distinct 200×270 dark cards for **Codeforces**, **LeetCode**, **AtCoder**, **CSES**, and **Toph**.
+- Pure vector platform logos, laser sweep beams, radial glowing halos, handles (`@Pri8899`), solution counters, and active rating/tier badges.
+- Wrapped in one-click profile links in `README.md` to navigate directly to your live profiles.
+
+#### D. Structured Solved Problems Browse Index Table
+- Clean, searchable markdown table indexing your entire solution catalog:
+  `| # | Platform | Problem | Category / Div | Language | Date Solved | Solution |`
+- **Clickable Problem Names & Codes:** Links directly to the live problem statement on Codeforces, CSES, AtCoder, LeetCode, or Toph.
+- **Clickable Solution Links:** Links directly to the solution source code file in your repository.
+
+---
+
+### 4. Extension Popup Dashboard & Live Analytics
 
 The extension popup provides an instant command center for inspecting sync health, practice streaks, and submission trends.
 
@@ -284,9 +415,9 @@ One-click access to full-page workstation tools:
 </p>
 
 Track your true momentum with verified accuracy:
-- **Platform Filter Pills:** Switch between `ALL`, `💙 CF`, `🩷 AC`, `💛 LC`, and `💚 TP` to filter stats dynamically.
+- **Platform Filter Pills:** Switch between `ALL`, `💙 CF`, `🩷 AC`, `🔵 CSES`, `💛 LC`, and `💚 TP` to filter stats dynamically.
 - **Honest Streak Tracker:** Seven-day visual momentum row. Green checkmarks (`✓`) indicate days with accepted solutions, while missed days honestly display red marks (`✕`).
-- **Platform Solves Donut:** High-contrast visual breakdown showing cumulative solved problem counts across Codeforces (235), AtCoder (21), LeetCode (22), and Toph (30), summing to 308 total solves.
+- **Platform Solves Donut:** High-contrast visual breakdown showing cumulative solved problem counts across Codeforces, AtCoder, CSES, LeetCode, and Toph.
 
 ---
 
@@ -299,7 +430,7 @@ Track your true momentum with verified accuracy:
 Deep historical analytics at a glance:
 - **Dual-Series Line Chart:** Tracks Accepted solutions (green line) versus Failed attempts (red line) over the preceding 30 days.
 - **Clamped Tooltips:** Hovering over any data point reveals the exact submission breakdown without clipping outside the popup boundaries.
-- **Key Metrics Row:** Displays live counts for **Solved** (308), **Attempts** (989), Current **Streak** (3), Solves **Today** (1), and overall **AC Rate** (31%).
+- **Key Metrics Row:** Displays live counts for **Solved**, **Attempts**, Current **Streak**, Solves **Today**, and overall **AC Rate**.
 
 ---
 
@@ -310,13 +441,13 @@ Deep historical analytics at a glance:
 </p>
 
 Automated detection and synchronization of un-archived submissions:
-- **🔍 Scan Unsynced:** Automatically queries Codeforces, AtCoder, LeetCode, and Toph APIs to identify solutions not yet synced to GitHub.
-- **Platform Status Rows:** Real-time sync health for all 4 supported judges.
+- **🔍 Scan Unsynced:** Automatically queries Codeforces, AtCoder, CSES, LeetCode, and Toph APIs to identify solutions not yet synced to GitHub.
+- **Platform Status Rows:** Real-time sync health for all 5 supported judges.
 - **⚡ Sync Unsynced Solutions:** One-click bulk sync that fetches source code and generates structured GitHub repository commits.
 
 ---
 
-### 3. Global Contest Hub & Codeforces Upsolve Radar
+### 5. Global Contest Hub & Codeforces Upsolve Radar
 
 Never miss an upcoming contest and turn past contest failures into rapid learning opportunities.
 
@@ -348,7 +479,7 @@ Intelligent upsolving engine tailored for competitive growth:
 
 ---
 
-### 4. Extension Settings & Customization Studio
+### 6. Extension Settings & Customization Studio
 
 Customize every aspect of your coding and synchronization experience via the glassmorphic Settings page.
 
@@ -374,7 +505,7 @@ Seamless GitHub portfolio synchronization setup:
 
 Personalize your IDE workstation:
 - **Default Editor Theme:** Choose from VS Code Dark+, Dracula, One Dark Pro, GitHub Dark, Monokai, and Catppuccin Mocha.
-- **Default Language:** Set your default language preset from the 11 built-in compiler standards (**C++23 (Latest GCC 14.1)**, **C++20 (GCC 14.1)**, **C++17 (GCC 11.1)**, **Python 3.13 (Latest)**, **Python 3.12**, **Java 21 / 17 (OpenJDK)**, **Rust 1.85 (Latest)**, **Go 1.23 (Latest)**, **JavaScript (Node 22)**, **Kotlin 2.1**, **C# (.NET 8)**).
+- **Default Language:** Set your default language preset from the 11 built-in compiler standards (**C++23**, **C++20**, **C++17**, **Python 3.13**, **Python 3.12**, **Java 21 / 17**, **Rust 1.85**, **Go 1.23**, **JavaScript**, **Kotlin 2.1**, **C# .NET 8**).
 - **Editor Font Size Slider:** Granular font sizing from 12px to 24px with live updating.
 - **Vim Mode Toggle:** Enable authentic modal Vim keybindings inside the Monaco editor.
 - **Play Sound on Sync:** Audio chimes for sync successes and verdict notifications.
@@ -417,13 +548,13 @@ Configure sandbox compiler execution:
 </p>
 
 Tailor your contest schedule notifications:
-- **Platforms to Show:** Checkboxes to include or exclude rounds from Codeforces, AtCoder, LeetCode, Toph, CodeChef, HackerRank, and TopCoder.
+- **Platforms to Show:** Checkboxes to include or exclude rounds from Codeforces, AtCoder, CSES, LeetCode, Toph, CodeChef, HackerRank, and TopCoder.
 - **CLIST API Key:** Optional key for extended contest metadata.
 - **Notify Before Contest:** Desktop notification reminders (5, 10, 15, or 30 minutes before round kickoff).
 
 ---
 
-### 5. Automated GitHub Synchronization Architecture
+### 7. Automated GitHub Synchronization Hierarchy
 
 CodeSync Pro automatically generates a clean, structured competitive programming portfolio on your GitHub account.
 
@@ -434,11 +565,13 @@ CodeSync Pro automatically generates a clean, structured competitive programming
 </p>
 
 Top-level folders are cleanly partitioned by competitive programming platform:
+- **assets/** — Hosts the 7 auto-generated animated vector SVGs (`codesync-stats.svg`, `overview.svg`, 5 profile badges).
 - **AtCoder/** — Solutions synced from AtCoder contests and practice tasks.
 - **Codeforces/** — Subdivided hierarchically by contest division.
-- **LeetCode/** — Problems categorized by difficulty and topic.
+- **CSES/** — Categorized across the 6 official CSES problem categories.
+- **LeetCode/** — Problems categorized by difficulty (`Easy`, `Medium`, `Hard`) and topic.
 - **Toph/** — Organized by problem category and practice division.
-- **README.md** — Auto-generated portfolio overview with badges and platform statistics.
+- **README.md** — Auto-generated portfolio overview with badges, overview dashboard, and clickable problem index.
 
 ---
 
@@ -455,7 +588,19 @@ Within the Codeforces directory, solutions are structured according to round div
 
 ---
 
-#### C. Synced Problem Directory & Markdown Archive (`github_synced_problem_folder.png`)
+#### C. CSES 6-Category Hierarchy
+
+Within the CSES directory, solutions are organized by official categories:
+- **Introductory/**
+- **Sorting & Searching/**
+- **Dynamic Programming/**
+- **Graphs & Trees/**
+- **Math & Queries/**
+- **Others / Advanced/**
+
+---
+
+#### D. Synced Problem Directory & Markdown Archive (`github_synced_problem_folder.png`)
 
 <p align="center">
   <img src="assets/github_synced_problem_folder.png" alt="GitHub Synced Problem Folder" width="85%" />
@@ -469,8 +614,6 @@ Each problem solution directory contains:
 
 ## 🎛️ Exhaustive Button & Control Directory
 
-This directory exhaustively details every button, dropdown, and control built into CodeSync Pro across all panels and screens.
-
 ### A. Monaco IDE Workstation Buttons & Controls
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
@@ -479,22 +622,37 @@ This directory exhaustively details every button, dropdown, and control built in
 | **Test (Run) Button** | `▶ Test (Run)` | Topbar Right | Compiles and executes code against **all testcases** in the right panel. Measures wall-clock runtime in milliseconds and memory usage. Shortcut: `Ctrl+Enter` or `Cmd+Enter`. |
 | **Submit Button** | `🚀 Submit` | Topbar Right | Submits the solution directly into the active judge tab's submission form. If direct form injection is unavailable, copies code to clipboard with a toast notification. |
 | **Theme Selector** | `VS Code Dark ▾` | Topbar Center | Dropdown offering 6 themes: **VS Code Dark+**, **Dracula**, **One Dark Pro**, **GitHub Dark**, **Monokai**, and **Catppuccin Mocha**. Propagates across tabs instantly. |
-| **Language Selector** | `C++23 (Latest GCC 14.1) ▾` | Topbar Center | Dropdown selecting active compiler standard: **C++23 (Latest GCC 14.1)**, **C++20 (GCC 14.1)**, **C++17 (GCC 11.1)**, **Python 3.13 (Latest)**, **Python 3.12**, **Java 21 / 17 (OpenJDK)**, **Rust 1.85 (Latest)**, **Go 1.23 (Latest)**, **JavaScript (Node 22)**, **Kotlin 2.1**, and **C# (.NET 8)**. All 35+ languages supported for automated sync. |
+| **Language Selector** | `C++23 (Latest GCC 14.1) ▾` | Topbar Center | Dropdown selecting active compiler standard: **C++23**, **C++20**, **C++17**, **Python 3.13 / 3.12**, **Java 21 / 17**, **Rust 1.85**, **Go 1.23**, **Node.js 22**, **Kotlin 2.1**, and **C# .NET 8**. All 35+ languages supported for automated sync. |
 | **Format Button** | `⚡ Format` | Topbar Center | Formats code with 4-space indentation and operator padding while **shielding ASCII art comments, block comments, and string literals** from corruption. Shortcut: `Alt+Shift+F`. |
 | **Snippets Button** | `⚡ Snippets` | Topbar Center | Opens the Algorithmic Snippets drawer containing pre-built competitive programming templates (Fast I/O, Modular Arithmetic, DSU, Segment Tree, Sieve). |
 | **Audio Notification** | `🔔` (Bell Icon) | Topbar Center | Toggles sound effects for Accepted verdicts and test completion. Stored in local settings. |
 | **Refresh Problem** | `🔄` | Problem Badge | Re-detects and extracts problem statement, limits, and sample test cases from the active judge browser tab. |
-| **Close Problem** | `✕` | Topbar Badge & Header | Closes active problem, saves current code draft, and cleanly resets the IDE to **Standalone Scratchpad Mode**. Also available as a red button in the problem statement header. |
+| **Close Problem** | `✕` | Topbar Badge & Header | Closes active problem, saves current code draft, and cleanly resets the IDE to **Standalone Scratchpad Mode**. |
 | **+ Add Testcase** | `+ Add Testcase` | Testcase Panel | Appends a fresh custom testcase card with editable Input and Expected Output textareas for testing edge cases. |
 | **Clear Verdicts** | `Clear Verdicts` | Testcase Panel | Clears all execution verdict pills (`AC`, `WA`, `TLE`, `RTE`) and resets card borders back to idle state. |
 | **Run Single Test** | `▶ Run` | Each Test Card | Executes only the targeted testcase rather than the entire test suite, saving compilation and testing time. |
 | **Remove Test** | `✕ Remove` | Each Test Card | Deletes the targeted testcase card from the workspace. |
 | **Compiler Output Tab**| `💻 Compiler Output` | Testcase Header | Switches panel view from testcases to the compiler terminal stream to inspect GCC/Clang warning and error lines. |
-| **Quick Jump Buttons** | `Codeforces`, `AtCoder`, etc. | Left Panel (Scratchpad)| One-click launcher buttons opening the problemset pages for Codeforces, AtCoder, LeetCode, and Toph. |
+| **Quick Jump Buttons** | `Codeforces`, `CSES`, etc. | Left Panel (Scratchpad)| One-click launcher buttons opening the problemset pages for Codeforces, AtCoder, CSES, LeetCode, and Toph. |
 
 ---
 
-### B. Contest Hub Controls & Calendar Buttons
+### B. Codeforces Problemset Filter & Floating Controls
+
+| Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
+| :--- | :--- | :--- | :--- |
+| **Floating Filter Button** | `🎯 Filter Problems` | CF Problemset Floating | Floating glassmorphic button with live status dot and match counter (`visible / total`). |
+| **Single Rating Selector** | Dropdown (800–3500) | Filter Modal & Settings | Selects specific rating target across all 28 official Codeforces ratings. |
+| **Quick Rating Pills** | `All`, `800`, `1000` ... | Filter Modal & Settings | Instant 1-click rating selection for rapid level jumps. |
+| **Tag Search Bar** | `Search tags...` | Tags Accordion | Real-time filter filtering 37 official Codeforces tags by name. |
+| **Tag Matching Mode** | `Match ANY` / `Match ALL` | Tags Accordion | Toggles between logical OR (any selected tag matches) and logical AND (all selected tags must match). |
+| **Hide Solved Toggle** | Checkbox | Filter Modal & Settings | Filters out challenges with Accepted verdict on Codeforces or already synced to GitHub. |
+| **Include Unrated Toggle**| Checkbox | Filter Modal & Settings | Toggles visibility of unrated and gym challenges. |
+| **Clear Filter Button** | `Clear Filter` | Status Banner & Modal | Instantly resets all filters and restores full Codeforces problemset. |
+
+---
+
+### C. Contest Hub Controls & Calendar Buttons
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
@@ -507,7 +665,7 @@ This directory exhaustively details every button, dropdown, and control built in
 
 ---
 
-### C. Upsolve Radar Controls & Problem Launcher
+### D. Upsolve Radar Controls & Problem Launcher
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
@@ -518,7 +676,7 @@ This directory exhaustively details every button, dropdown, and control built in
 
 ---
 
-### D. Extension Popup Dashboard Controls
+### E. Extension Popup Dashboard Controls
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
@@ -533,15 +691,16 @@ This directory exhaustively details every button, dropdown, and control built in
 
 ---
 
-### E. Settings & Customization Controls
+### F. Settings & Customization Controls
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
 | **Save & Test Connection** | `💾 Save & Test Connection` | GitHub Card | Validates Personal Access Token and verifies repository write permissions. |
 | **Create Repository** | `✨ Create` | GitHub Card | Automatically provisions a new public or private repository via the GitHub REST API. |
-| **Auto-update Stats Card** | Toggle Switch | Stats Card Settings | Automatically commits updated `codesync-stats.svg` to GitHub on every accepted solve. |
+| **Auto-update Stats Card** | Toggle Switch | Stats Card Settings | Automatically commits updated portfolio SVGs to GitHub on every accepted solve. |
 | **Copy Markdown Snippet** | `📋 Copy Markdown` | Stats Card Settings | Copies the formatted markdown embed link to paste into your GitHub profile `README.md`. |
-| **Push Stats Card Now** | `🚀 Push Stats Card Now` | Stats Card Settings | Generates vector SVG client-side and commits `codesync-stats.svg` immediately to GitHub. |
+| **Push Stats Card Now** | `🚀 Push Stats Card Now` | Stats Card Settings | Generates vector SVGs client-side and commits the portfolio suite immediately to GitHub. |
+| **CSES Handle / User ID** | Input Field | CSES Settings Card | Configures user ID or handle for CSES profile links and portfolio badges. |
 | **Save Preferences** | `💾 Save Preferences` | Preferences Card | Persists editor theme, font size, Vim mode, and audio preferences to `chrome.storage.local`. |
 | **Reset Templates** | `↺ Reset to Defaults` | Templates Card | Restores original factory competitive programming starter templates. |
 | **Add Custom Template** | `+ Add Custom Template` | Templates Card | Opens a modal to define custom language boilerplate code and compilation flags. |
@@ -550,7 +709,80 @@ This directory exhaustively details every button, dropdown, and control built in
 
 ## 🔬 Core Engineering Deep-Dives
 
-### 1. 30-Day Activity Graph & Dual-Series Analytics Engine
+### 1. Atomic 3-Commit Git Database Trees API Architecture
+
+Every accepted solve triggers an automated 3-commit sequence designed to keep your GitHub contribution graph clean and professional:
+
+```
+[Accepted Verdict Received]
+           │
+           ├──► Commit #1 (ques: [Problem] Statement & Limits)
+           │      └── Generates problem directory & Markdown statement
+           │
+           ├──► Commit #2 (code: [Problem] Solution & Metrics)
+           │      └── Pushes formatted code file (.cpp, .py, .java, etc.)
+           │
+           └──► Commit #3 (stats: update CodeSync Pro portfolio)
+                  └── Git Database Trees API Atomic Commit:
+                        ├── assets/codesync-stats.svg
+                        ├── assets/overview.svg
+                        ├── assets/codeforces.svg
+                        ├── assets/leetcode.svg
+                        ├── assets/atcoder.svg
+                        ├── assets/cses.svg
+                        ├── assets/toph.svg
+                        └── README.md
+```
+
+#### Why Git Trees API?
+Individual REST API commits via `PUT /repos/:owner/:repo/contents/:path` create a separate Git commit for each file. Updating 7 SVGs and `README.md` via standard endpoints would produce **8 separate commits**, causing commit spam and race conditions.
+
+CodeSync Pro resolves this by utilizing the lower-level **GitHub Git Database Trees API**:
+1. `GET /repos/:owner/:repo/git/ref/heads/main` to retrieve the current parent commit SHA.
+2. `GET /repos/:owner/:repo/git/commits/:commit_sha` to extract `base_tree`.
+3. `POST /repos/:owner/:repo/git/trees` bundling all 8 portfolio files into a single tree node.
+4. `POST /repos/:owner/:repo/git/commits` referencing the new tree SHA and parent commit.
+5. `PATCH /repos/:owner/:repo/git/refs/heads/main` atomically advancing the branch head.
+
+All 8 files land in the repository in **exactly 1 atomic commit**, enforcing strictly 3 commits per solve.
+
+---
+
+### 2. Animated Multi-Platform Portfolio Engine & Vector SMIL Geometry
+
+The portfolio suite is rendered entirely as pure client-side SVG vectors:
+- **Zero Third-Party Dependency:** Completely independent of third-party rendering services or cloud proxies.
+- **Continuous SMIL Animations:** Smooth, GPU-accelerated SVG animations:
+  - Top laser sweep accents utilizing `<linearGradient>` with animated `x1`/`x2` phases.
+  - Glowing radial backdrops using `<radialGradient>` opacity pulsing.
+  - Breathing status dots using `<circle>` radius and opacity oscillations.
+- **Pure Vector Monograms:** Codeforces 3-bar insignia, CSES code brackets, LeetCode orange geometry, AtCoder apex monogram, and Toph rose styling rendered in SVG geometry without raster pixelation.
+
+---
+
+### 3. Codeforces Problemset Filter with Live MutationObserver & Bi-Directional Storage
+
+The Codeforces filtering engine maintains live synchronization across open tabs and extension settings:
+- **DOM MutationObserver:** Watches the problem table container (`.problems`). Dynamic sorting, pagination, and DOM re-renders trigger automatic re-filtering within 16ms without page reloads.
+- **Storage Observer:** Listens for `chrome.storage.onChanged` events. Adjusting ratings or tags in Extension Settings immediately applies across all open Codeforces tabs in real time.
+- **Smart Solved Detection:** Cross-references problem indices against local `syncLog` and user submission caches to accurately filter out solved problems.
+
+---
+
+### 4. CSES 6-Category Classification & DataTransfer Form Injection
+
+- **6-Category Classification:** CSES problems are classified across the 6 official sections:
+  1. `Introductory Problems`
+  2. `Sorting & Searching`
+  3. `Dynamic Programming`
+  4. `Graphs & Trees`
+  5. `Math & Queries`
+  6. `Others / Advanced`
+- **1-Click Direct Submit Bridge:** Automatically constructs a synthetic `File` object from your Monaco editor code, wraps it in a browser `DataTransfer` payload, attaches it to the CSES file upload input, and triggers submission with zero friction.
+
+---
+
+### 5. 30-Day Activity Graph & Dual-Series Analytics Engine
 
 The submission activity visualizer renders a dual-series SVG line chart over a rolling 30-day temporal window:
 
@@ -566,33 +798,33 @@ The submission activity visualizer renders a dual-series SVG line chart over a r
 
 - **Dual Metrics:** Green polyline represents Accepted solutions (`AC`); Red polyline tracks failed attempts (`WA`, `TLE`, `RTE`, `MLE`).
 - **Normalized Geometry:** Y-axis dynamically computes `maxY = max(all_counts, 5)` and maps coordinates via:
-  $$y = 	ext{height} - \left(rac{	ext{count}}{	ext{maxY}} 	imes (	ext{height} - 24)ight) - 12$$
+  $$y = \text{height} - \left(\frac{\text{count}}{\text{maxY}} \times (\text{height} - 24)\right) - 12$$
 - **Clamped Tooltip Positioning:** Prevents tooltip clipping at the viewport edges by computing `Math.max(10, Math.min(viewportWidth - tooltipWidth - 10, targetLeft))`.
 
 ---
 
-### 2. Honest Streak & Daily Momentum Engine
+### 6. Honest Streak & Daily Momentum Engine
 
 Unlike standard trackers that falsely award streaks for any page visit or failed run, CodeSync Pro enforces an **Honest Streak** guarantee:
 
-$$	ext{Streak Day Status} = egin{cases} 	ext{Checked (Green)} & 	ext{if } 	ext{AC Count} \ge 1 \ 	ext{Crossed (Red)} & 	ext{if } 	ext{Attempts} > 0 	ext{ and } 	ext{AC Count} = 0 \ 	ext{Missed (Grey)} & 	ext{if } 	ext{Total Submissions} = 0 \end{cases}$$
+$$\text{Streak Day Status} = \begin{cases} \text{Checked (Green)} & \text{if } \text{AC Count} \ge 1 \\ \text{Crossed (Red)} & \text{if } \text{Attempts} > 0 \text{ and } \text{AC Count} = 0 \\ \text{Missed (Grey)} & \text{if } \text{Total Submissions} = 0 \end{cases}$$
 
 - **Consecutive Momentum:** The streak counter increments only through continuous consecutive calendar days containing at least one verified Accepted solution.
 - **Visual Accuracy:** Red indicator (`✕`) honors the effort of practice while truthfully reflecting that no problem was solved on that day.
 
 ---
 
-### 3. Difficulty Distribution Donut & Category Geometry
+### 7. Difficulty Distribution Donut & Category Geometry
 
 The difficulty donut visualizes the cumulative problem distribution using SVG stroke-dasharray geometry:
 
-- **Perimeter Calculation:** For a radius $r = 65$, circumference $C = 2 \pi r pprox 408.407$.
+- **Perimeter Calculation:** For a radius $r = 65$, circumference $C = 2 \pi r \approx 408.407$.
 - **Arc Length:** For each platform $i$ with fraction $f_i$, the dash array is $[f_i \cdot C, C]$ with dash offset $-\sum_{j < i} (f_j \cdot C)$.
 - **Dynamic Segment Hover:** Hovering over individual donut arcs displays exact problem counts and percentage contribution.
 
 ---
 
-### 4. Intelligent C++ Formatter with AST & Literal Shielding
+### 8. Intelligent C++ Formatter with AST & Literal Shielding
 
 CodeSync Pro includes an in-browser C++ formatter built specifically for competitive programmers. Standard formatters often corrupt ASCII problem headers or string literals. CodeSync Pro implements a four-phase protection pipeline:
 
@@ -603,7 +835,7 @@ CodeSync Pro includes an in-browser C++ formatter built specifically for competi
 
 ---
 
-### 5. CPH Multi-Testcase Runner & Telemetry
+### 9. CPH Multi-Testcase Runner & Telemetry
 
 Inspired by the Competitive Programming Helper (CPH) desktop workflow, the workstation features an integrated local test runner:
 
@@ -613,43 +845,9 @@ Inspired by the Competitive Programming Helper (CPH) desktop workflow, the works
 
 ---
 
-### 6. Automated GitHub Synchronization & Repository Hierarchy
+### 10. Automated GitHub Synchronization & Repository Hierarchy
 
-Every time an Accepted verdict is achieved, CodeSync Pro archives the solution directly to GitHub via the REST API:
-
-```
-your-repo/
-├── AtCoder/
-│   └── Beginner/
-│       └── A - Cut/
-│           ├── A - Cut.cpp
-│           └── README.md
-├── Codeforces/
-│   ├── Div. 1/
-│   ├── Div. 2/
-│   │   └── 1956A - Nene's Game/
-│   │       ├── 1956A - Nene's Game.cpp
-│   │       └── README.md
-│   ├── Div. 3/
-│   ├── Div. 4/
-│   └── Others/
-├── CSES/
-│   ├── 1068 - Weird Algorithm/
-│   │   ├── Weird_Algorithm.cpp
-│   │   └── README.md
-│   └── 1633 - Dice Combinations/
-│       ├── Dice_Combinations.cpp
-│       └── README.md
-├── LeetCode/
-│   └── 0121 - Best Time to Buy and Sell Stock/
-│       ├── 0121 - Best Time to Buy and Sell Stock.cpp
-│       └── README.md
-└── Toph/
-    └── Practice/
-        └── Byang's Additions/
-            ├── Byang's Additions.cpp
-            └── README.md
-```
+Every time an Accepted verdict is achieved, CodeSync Pro archives the solution directly to GitHub:
 
 - **Commit Metadata:** Every commit includes problem title, contest ID, rating, runtime, memory, and direct problem link.
 - **Self-Documenting READMEs:** Auto-generates clean Markdown problem descriptions inside each problem folder.
@@ -657,7 +855,7 @@ your-repo/
 
 ---
 
-### 7. Judge DOM Scraping & One-Click Auto-Submit Bridges
+### 11. Judge DOM Scraping & One-Click Auto-Submit Bridges
 
 - **Codeforces:** 1-Click direct submission from CodeSync IDE! Injects submission code into the contest/problemset submit form, selects the G++23 compiler, and executes the submit with zero delay.
 - **AtCoder:** 1-Click direct submission from CodeSync IDE! Detects language selection and populates the task submission form.
@@ -667,86 +865,51 @@ your-repo/
 
 ---
 
-### 8. Animated Multi-Platform Portfolio Engine & Profile Badges (v4.4.0)
+### 12. Security Architecture, Local-First Storage & AST Obfuscation
 
-Turn your competitive programming repository into a live, interactive, animated vector portfolio! CodeSync Pro generates, animates, and commits a complete vector portfolio suite directly into your solutions repository (`assets/` directory) in **one single atomic Git commit**:
-
-1. **Dynamic Stats Card (`assets/codesync-stats.svg`):** Real-time rank, streak flame, accuracy %, submission totals, and animated laser sweep.
-2. **Platform & Category Overview (`assets/overview.svg`):** 1000px wide animated overview dashboard with progress tracks across **Codeforces**, **CSES**, **Toph**, **AtCoder**, and **LeetCode**, featuring division breakdown for Codeforces (Div. 1–4 + Others) and all 6 official categories for CSES (Introductory, Sorting & Searching, Dynamic Programming, Graphs & Trees, Math & Queries, Others/Advanced).
-3. **5 Clickable Animated Profile Cards (`assets/*.svg`):** Dark-mode profile cards for Codeforces, LeetCode, AtCoder, CSES, and Toph with top laser sweep animations, radial glows, handle badges, and one-click redirection to your live platform profiles.
-4. **Structured Solved Problems Browse Index:** Clean, interactive markdown table cataloging your entire solution history with clickable problem links, category tags, language detection, and direct links to solution code files in your repository.
-
-<p align="center">
-  <img src="assets/stats_card_demo.svg" alt="CodeSync Pro Dynamic Profile Stats Card Demo" width="495" />
-</p>
-
-#### 📌 How to Embed on Your GitHub Profile README
-
-Choose your preferred format (or copy directly from the **CodeSync Pro** Popup or Settings switcher):
-
-**Option 1: Centered HTML (Recommended — Pixel-Perfect Center Alignment)**
-```html
-<p align="center">
-  <a href="https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>">
-    <img src="https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/assets/codesync-stats.svg" alt="CodeSync Pro Stats" width="495" />
-  </a>
-</p>
-```
-
-**Option 2: Standard Markdown**
-```markdown
-[![CodeSync Pro Stats](https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/assets/codesync-stats.svg)](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>)
-```
-
-Replace `<YOUR_GITHUB_USERNAME>` and `<YOUR_SOLUTIONS_REPO>` with your actual repository details (or copy the one-click snippet directly from the CodeSync Pro Popup or Settings page!).
-
-#### ⚡ Atomic 3-Commit Git Architecture
-To keep your GitHub contribution graph pristine and clean, CodeSync Pro strictly enforces **exactly 3 commits per accepted solve**:
-- **Commit #1 (`ques:`):** Problem statement, constraints, time/memory limits, and sample testcases.
-- **Commit #2 (`code:`):** Formatted source code, verdict details, execution time, and memory usage.
-- **Commit #3 (`stats:`):** Atomic update of all 7 portfolio SVGs and repository `README.md` via the GitHub Git Database Trees API in a single atomic commit.
-
-#### ✨ Key Features of the Dynamic Stats Card:
-- **Zero Third-Party Servers / 100% Native SVG:** Rendered entirely client-side and committed directly to your repository via the GitHub REST API. No downtime, no rate limits, and zero external tracking.
-- **Cross-Platform Aggregation:** Displays total solved counts across **Codeforces**, **CSES**, **AtCoder**, **LeetCode**, and **Toph**.
-- **Real-Time Streak Tracker:** Displays your current active solving streak with flame indicator.
-- **AC Accuracy Rate & Submissions:** Computes real submission efficiency and dual-series metrics.
-- **Segmented Visual Distribution Bar:** Proportional multi-platform progress bar with platform signature highlights.
-- **Automatic Background Sync:** Updates automatically on every accepted solve across any supported platform with smart debouncing.
-- **1-Click Manual Push & Preview:** Live preview inside the extension Popup (`📊 Stats Card` button) and Settings tab with an immediate `🚀 Push Card to GitHub` trigger.
+- **Local-First Storage:** All preferences, tokens, and solution drafts are encrypted and stored in your browser's local `chrome.storage.local`.
+- **Zero External Telemetry:** CodeSync Pro communicates only with official judge APIs, GitHub REST API, and selected sandbox compilers.
+- **Minimal Permissions:** Uses strictly declared MV3 permissions (`storage`, `alarms`, `scripting`, `offscreen`).
+- **Bytecode & AST Protection:** Extension scripts are compiled using an AST string-array virtualization pipeline with `browser-no-eval` compliance, preventing tampering while adhering strictly to Manifest V3 CSP restrictions.
 
 ---
 
-## 🌐 Browser Compatibility (Google Chrome & Microsoft Edge)
+## 🌐 Browser Compatibility (Google Chrome, Microsoft Edge, Brave)
 
 CodeSync Pro is built on the standard **Manifest V3** specification and fully tested on:
 
 | Browser | Minimum Version | Tested & Verified Status |
 | :--- | :--- | :--- |
+| **Brave Browser** | Brave 1.48+ | Fully Compatible (Native Webview & Adblock-Resistant) |
 | **Google Chrome** | Chrome 110+ | Fully Compatible (Service Worker & Offscreen DOM) |
 | **Microsoft Edge** | Edge 110+ | Fully Compatible (Chromium Engine Native) |
-| **Brave Browser** | Brave 1.48+ | Fully Compatible |
 | **Opera / Vivaldi**| Latest Chromium | Fully Compatible |
 
 ---
 
 ## 🚀 Installation & Quick Start Guide
 
-### Step 1: Clone or Download the Repository
+### Option 1: 1-Click Release Package (Recommended)
+
+1. Download **`CodeSync Pro.zip`** from the latest [GitHub Release (v4.4.0)](https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.4.0).
+2. Unzip the file (extracts to `CodeSync Pro/`).
+3. Open your browser and navigate to:
+   - **Brave:** `brave://extensions`
+   - **Chrome:** `chrome://extensions`
+   - **Edge:** `edge://extensions`
+4. Toggle **Developer mode** ON in the top-right corner.
+5. Click **Load unpacked** and select the extracted `CodeSync Pro` directory.
+6. Pin CodeSync Pro to your browser toolbar!
+
+### Option 2: Clone from Source
 
 ```bash
 git clone https://github.com/Pri8899/CodeSync-Pro-Extension.git
 ```
 
-### Step 2: Load Extension in Chrome / Edge
-
-1. Open your browser and navigate to:
-   - Chrome: `chrome://extensions`
-   - Edge: `edge://extensions`
-2. Enable **Developer mode** toggle in the top-right corner.
-3. Click **Load unpacked** in the top-left corner.
-4. Select the `CodeSync Pro Extension` root folder.
-5. CodeSync Pro is now loaded! Pin the extension icon to your toolbar.
+1. Open `chrome://extensions` (or `brave://extensions`).
+2. Enable **Developer mode**.
+3. Click **Load unpacked** and select the cloned directory.
 
 ---
 
@@ -755,10 +918,12 @@ git clone https://github.com/Pri8899/CodeSync-Pro-Extension.git
 1. Click the CodeSync Pro toolbar icon and open **Settings (⚙️)**.
 2. Under **GitHub Repository**:
    - Enter your **GitHub Username**.
-   - Enter your target repository name (or click **✨ Create** to create one automatically).
-   - Generate a GitHub Personal Access Token (classic) with the `repo` scope enabled at [github.com/settings/tokens](https://github.com/settings/tokens).
-   - Paste the token into the token field and click **💾 Save & Test Connection**.
-3. Under **Preferences**, select your preferred editor theme and default compiler standard.
+   - Enter your target repository name (e.g. `CP`). Click **✨ Create** to automatically provision a new private or public repository on your account.
+   - Generate a classic GitHub Personal Access Token with the `repo` scope at [github.com/settings/tokens](https://github.com/settings/tokens).
+   - Paste the token into the field and click **💾 Save & Test Connection**.
+3. Under **Judge Accounts**:
+   - Enter your handles for Codeforces, AtCoder, CSES, LeetCode, and Toph.
+4. Solve any problem on a supported platform — CodeSync Pro will automatically capture your Accepted submission and publish the 3-commit sequence to your repository!
 
 ---
 
@@ -766,11 +931,13 @@ git clone https://github.com/Pri8899/CodeSync-Pro-Extension.git
 
 | Shortcut | Context | Action |
 | :--- | :--- | :--- |
-| `Ctrl+Enter` / `Cmd+Enter` | Monaco IDE | Run All Testcases |
-| `Alt+Shift+F` / `Option+Shift+F` | Monaco IDE | Format Code (Protected) |
-| `Ctrl+S` / `Cmd+S` | Monaco IDE | Save Current Solution Draft |
-| `Ctrl+F` / `Cmd+F` | Monaco IDE | Find / Replace in Editor |
-| `Esc` | Monaco IDE | Close active modal / snippets drawer |
+| `Ctrl+Enter` / `Cmd+Enter` | Monaco IDE | **Test (Run)** code against all testcases |
+| `Alt+Shift+F` | Monaco IDE | **Format** code with comment/literal shielding |
+| `Ctrl+S` / `Cmd+S` | Monaco IDE | Save draft code locally |
+| `Ctrl+F` / `Cmd+F` | Monaco IDE | Find in code |
+| `Ctrl+H` / `Cmd+H` | Monaco IDE | Find & Replace in code |
+| `F1` | Monaco IDE | Open Monaco Command Palette |
+| `Esc` | Modal Windows | Close active modal |
 
 ---
 
@@ -790,6 +957,7 @@ git clone https://github.com/Pri8899/CodeSync-Pro-Extension.git
 | **IDE says "No Problem Active"** | Tab not detected on a supported problem URL | Navigate to a valid problem on CF, AC, CSES, LC, or Toph, then click the `🔄` Refresh icon. |
 | **Testcase Execution Timeout** | Infinite loop or slow server response | Verify base cases in code; increase timeout slider in Settings to 5-10s. |
 | **Streak shows Red ✕** | Only failed attempts recorded today | Solve at least one problem with an Accepted verdict to maintain your streak. |
+| **Codeforces Filter not applying** | Problem table dynamically refreshed | Click the floating `🎯 Filter Problems` button or reload the problemset page. |
 
 ---
 
@@ -798,6 +966,11 @@ git clone https://github.com/Pri8899/CodeSync-Pro-Extension.git
 <details>
 <summary><strong>Does CodeSync Pro support all programming languages?</strong></summary>
 <strong>Yes, 100%!</strong> CodeSync Pro provides universal support for all programming languages. Whether you code in C++, Python, Java, Rust, Go, JavaScript, TypeScript, Kotlin, C#, Ruby, Swift, C, PHP, Haskell, Scala, Dart, Perl, Pascal, Bash, or any other language across Codeforces, AtCoder, CSES, LeetCode, and Toph, CodeSync Pro executes, formats, and automatically archives your code to your GitHub repository with appropriate language-specific file extensions (<code>.cpp</code>, <code>.py</code>, <code>.java</code>, <code>.rs</code>, <code>.go</code>, <code>.js</code>, <code>.ts</code>, <code>.kt</code>, <code>.cs</code>, <code>.rb</code>, <code>.swift</code>, etc.) and complete documentation.
+</details>
+
+<details>
+<summary><strong>Why are there exactly 3 commits per solve on GitHub?</strong></summary>
+CodeSync Pro strictly adheres to a clean 3-commit standard: Commit #1 stores the problem statement (<code>ques:</code>), Commit #2 stores the solution code with execution telemetry (<code>code:</code>), and Commit #3 atomically updates the 7 portfolio SVGs and repository README (<code>stats:</code>). This keeps your GitHub contribution graph balanced and organized.
 </details>
 
 <details>
@@ -819,5 +992,5 @@ Contributions, feature suggestions, and pull requests are warmly welcome!
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
 <p align="center">
-  <strong>Built with ⚡ by the CodeSync Pro Community</strong>
-</p>
+  <strong>Built with ⚡ by <a href="https://github.com/Pri8899">Partho Paul (Pri8899)</a> and the CodeSync Pro Community</strong>
+</p>\n
