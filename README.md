@@ -993,4 +993,4 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 <p align="center">
   <strong>Built with ⚡ by <a href="https://github.com/Pri8899">Partho Paul (Pri8899)</a> and the CodeSync Pro Community</strong>
-</p>\n
+</p>
