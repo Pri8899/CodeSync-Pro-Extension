@@ -667,11 +667,14 @@ your-repo/
 
 ---
 
-### 8. Dynamic GitHub Profile README Stats Card Engine
+### 8. Animated Multi-Platform Portfolio Engine & Profile Badges (v4.4.0)
 
-Turn your competitive programming grind into a live, interactive vector showcase! CodeSync Pro generates and commits a dynamic, high-resolution SVG stats card (`codesync-stats.svg`) directly to your solutions repository root.
+Turn your competitive programming repository into a live, interactive, animated vector portfolio! CodeSync Pro generates, animates, and commits a complete vector portfolio suite directly into your solutions repository (`assets/` directory) in **one single atomic Git commit**:
 
-Embed it directly on your personal **GitHub Profile README** (`github.com/<username>/<username>`) or inside your solutions portfolio.
+1. **Dynamic Stats Card (`assets/codesync-stats.svg`):** Real-time rank, streak flame, accuracy %, submission totals, and animated laser sweep.
+2. **Platform & Category Overview (`assets/overview.svg`):** 1000px wide animated overview dashboard with progress tracks across **Codeforces**, **CSES**, **Toph**, **AtCoder**, and **LeetCode**, featuring division breakdown for Codeforces (Div. 1–4 + Others) and all 6 official categories for CSES (Introductory, Sorting & Searching, Dynamic Programming, Graphs & Trees, Math & Queries, Others/Advanced).
+3. **5 Clickable Animated Profile Cards (`assets/*.svg`):** Dark-mode profile cards for Codeforces, LeetCode, AtCoder, CSES, and Toph with top laser sweep animations, radial glows, handle badges, and one-click redirection to your live platform profiles.
+4. **Structured Solved Problems Browse Index:** Clean, interactive markdown table cataloging your entire solution history with clickable problem links, category tags, language detection, and direct links to solution code files in your repository.
 
 <p align="center">
   <img src="assets/stats_card_demo.svg" alt="CodeSync Pro Dynamic Profile Stats Card Demo" width="495" />
@@ -685,17 +688,23 @@ Choose your preferred format (or copy directly from the **CodeSync Pro** Popup o
 ```html
 <p align="center">
   <a href="https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>">
-    <img src="https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/codesync-stats.svg" alt="CodeSync Pro Stats" width="495" />
+    <img src="https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/assets/codesync-stats.svg" alt="CodeSync Pro Stats" width="495" />
   </a>
 </p>
 ```
 
 **Option 2: Standard Markdown**
 ```markdown
-[![CodeSync Pro Stats](https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/codesync-stats.svg)](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>)
+[![CodeSync Pro Stats](https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>/main/assets/codesync-stats.svg)](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_SOLUTIONS_REPO>)
 ```
 
 Replace `<YOUR_GITHUB_USERNAME>` and `<YOUR_SOLUTIONS_REPO>` with your actual repository details (or copy the one-click snippet directly from the CodeSync Pro Popup or Settings page!).
+
+#### ⚡ Atomic 3-Commit Git Architecture
+To keep your GitHub contribution graph pristine and clean, CodeSync Pro strictly enforces **exactly 3 commits per accepted solve**:
+- **Commit #1 (`ques:`):** Problem statement, constraints, time/memory limits, and sample testcases.
+- **Commit #2 (`code:`):** Formatted source code, verdict details, execution time, and memory usage.
+- **Commit #3 (`stats:`):** Atomic update of all 7 portfolio SVGs and repository `README.md` via the GitHub Git Database Trees API in a single atomic commit.
 
 #### ✨ Key Features of the Dynamic Stats Card:
 - **Zero Third-Party Servers / 100% Native SVG:** Rendered entirely client-side and committed directly to your repository via the GitHub REST API. No downtime, no rate limits, and zero external tracking.
