@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://developer.chrome.com/docs/extensions/mv3/intro/"><img src="https://img.shields.io/badge/Manifest-V3-2f81f7?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Manifest V3" /></a>
-  <a href="https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.4.0"><img src="https://img.shields.io/badge/Version-v4.4.0-3b82f6?style=for-the-badge" alt="Version v4.4.0" /></a>
+  <a href="https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.5.0"><img src="https://img.shields.io/badge/Version-v4.5.0-3b82f6?style=for-the-badge" alt="Version v4.5.0" /></a>
   <a href="https://www.google.com/chrome/"><img src="https://img.shields.io/badge/Chrome-110%2B-4285f4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Google Chrome" /></a>
   <a href="https://www.microsoft.com/edge"><img src="https://img.shields.io/badge/Edge-110%2B-0078d7?style=for-the-badge&logo=microsoft-edge&logoColor=white" alt="Microsoft Edge" /></a>
   <a href="https://brave.com/"><img src="https://img.shields.io/badge/Brave-Supported-fb542b?style=for-the-badge&logo=brave&logoColor=white" alt="Brave Browser" /></a>
@@ -27,6 +27,7 @@
 ## 📖 Table of Contents
 
 - [🌟 Overview](#-overview)
+- [🚀 What's New in v4.5.0](#-whats-new-in-v450)
 - [🚀 What's New in v4.4.0](#-whats-new-in-v440)
 - [🖼️ Visual UI Tour & Complete Screenshot Directory](#️-visual-ui-tour--complete-screenshot-directory)
   - [Asset Manifest & Name Directory](#asset-manifest--name-directory)
@@ -125,6 +126,30 @@ CodeSync Pro bridges this entire workflow into a cohesive, high-performance work
 │  • Automatic division & category archiving across CF, CSES, AtCoder, LeetCode, Toph  │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 🚀 What's New in v4.5.0
+
+### 1. In-IDE Differential Stress Tester (Generator vs. Brute-Force)
+- **Built-in Differential Testing Engine:** Built directly into the Monaco Workstation right panel under the **🔥 Stress Test** tab.
+- **Grandmaster Debugging Workflow:** Automatically pits your optimized solution against a simple, guaranteed-correct brute-force solution across dozens of generated test cases to catch subtle corner-case Wrong Answer (WA), Time Limit Exceeded (TLE), or Runtime Error (RTE) bugs.
+- **Ultra-Fast 0ms Local JavaScript Generator:** Write test generators in JavaScript that execute instantly inside the browser with zero cloud latency and no API quotas. Full support for C++ and Python generators via the cloud runner.
+- **Starter Presets Vault:** One-click presets for common competitive programming patterns:
+  - *Array & Subarray Sum:* Random sized arrays with signed integers.
+  - *Tree & Graph:* Connected acyclic trees with $N-1$ random valid edges.
+  - *Strings & Palindromes:* Random strings over custom character sets.
+  - *Range Queries:* Random arrays with $Q$ valid $[L, R]$ query intervals.
+- **Real-Time Progress & Execution Controls:** Animated gradient progress bar, live testcase counter, active execution state badge, and instant **⏹ Stop** abort control.
+- **Mismatch Inspector & 1-Click CPH Integration:**
+  - Instantly halts upon finding a mismatch with an alert and sound chime.
+  - Displays failing input (`stdin`), expected brute-force output, and candidate solution output side-by-side with full diff modal viewer.
+  - **➕ Add to Testcases Button:** 1-click adds the failing test directly into the CPH testcase runner list for immediate step-through debugging.
+
+### 2. Timezone-Aligned Atomic 3-Commit Git Database Architecture
+- **Local Timezone Preservation:** All three commits (`ques:`, `code:`, `stats:`) across all 5 judges (Codeforces, AtCoder, CSES, LeetCode, Toph) preserve your exact system timezone offset (e.g. `+06:00`), ensuring all 3 commits are credited to the exact same calendar day on your GitHub contribution graph.
+- **GitHub Privacy Noreply Identity Caching:** Automatically queries `/user` to cache your official GitHub noreply email (`<id>+<login>@users.noreply.github.com`) so commits created via Git Data API are verified, link your avatar, and contribute green squares to your profile.
+- **Strict Chronological Ordering:** Enforces `finalCommitDate >= parentDate + 1000ms` so that Commit #3 is guaranteed to be chronologically sequenced right after Commit #2.
 
 ---
 
@@ -891,7 +916,7 @@ CodeSync Pro is built on the standard **Manifest V3** specification and fully te
 
 ### Option 1: 1-Click Release Package (Recommended)
 
-1. Download **`CodeSync Pro.zip`** from the latest [GitHub Release (v4.4.0)](https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.4.0).
+1. Download **`CodeSync Pro.zip`** from the latest [GitHub Release (v4.5.0)](https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.5.0).
 2. Unzip the file (extracts to `CodeSync Pro/`).
 3. Open your browser and navigate to:
    - **Brave:** `brave://extensions`
