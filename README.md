@@ -40,54 +40,48 @@
     - [F. LeetCode-Style Problem Statement Viewer (`ide_problem_statement_viewer.png`)](#f-leetcode-style-problem-statement-viewer-ide_problem_statement_viewerpng)
     - [G. Problem Panel in Standalone Scratchpad Mode (`ide_problem_panel_standalone.png`)](#g-problem-panel-in-standalone-scratchpad-mode-ide_problem_panel_standalonepng)
     - [H. CPH Multi-Testcase Runner & Accepted Banner (`ide_testcase_accepted_verdict.png`)](#h-cph-multi-testcase-runner--accepted-banner-ide_testcase_accepted_verdictpng)
-  - [2. Codeforces Problemset Persistent Filter & Tags Accordion](#2-codeforces-problemset-persistent-filter--tags-accordion)
-    - [A. Seamless Settings Integration & Single Rating Selector](#a-seamless-settings-integration--single-rating-selector)
-    - [B. Collapsible 37-Tag Accordion with Real-Time Search](#b-collapsible-37-tag-accordion-with-real-time-search)
-    - [C. Floating Glassmorphic Control & Active Status Banner](#c-floating-glassmorphic-control--active-status-banner)
-  - [3. Animated Multi-Platform Portfolio Engine & Profile Suite](#3-animated-multi-platform-portfolio-engine--profile-suite)
+  - [2. Animated Multi-Platform Portfolio Engine & Profile Suite](#2-animated-multi-platform-portfolio-engine--profile-suite)
     - [A. Dynamic GitHub Stats Card (`assets/codesync-stats.svg`)](#a-dynamic-github-stats-card-assetscodesync-statssvg)
     - [B. 1000px Platform & Category Overview Dashboard (`assets/overview.svg`)](#b-1000px-platform--category-overview-dashboard-assetsoverviewsvg)
     - [C. 5 Interactive Clickable Profile Cards (`assets/*.svg`)](#c-5-interactive-clickable-profile-cards-assetssvg)
     - [D. Structured Solved Problems Browse Index Table](#d-structured-solved-problems-browse-index-table)
-  - [4. Extension Popup Dashboard & Live Analytics](#4-extension-popup-dashboard--live-analytics)
+  - [3. Extension Popup Dashboard & Live Analytics](#3-extension-popup-dashboard--live-analytics)
     - [A. Popup Quick Navigation (`popup_navigation_buttons.png`)](#a-popup-quick-navigation-popup_navigation_buttonspng)
     - [B. Honest Streak & Platform Solves Donut (`popup_streak_and_donut.png`)](#b-honest-streak--platform-solves-donut-popup_streak_and_donutpng)
     - [C. 30-Day Activity Graph & Quick Metrics (`popup_activity_graph_metrics.png`)](#c-30-day-activity-graph--quick-metrics-popup_activity_graph_metricspng)
     - [D. Smart Sync Multi-Platform Center (`popup_smart_sync_center.png`)](#d-smart-sync-multi-platform-center-popup_smart_sync_centerpng)
-  - [5. Global Contest Hub & Codeforces Upsolve Radar](#5-global-contest-hub--codeforces-upsolve-radar)
+  - [4. Global Contest Hub & Codeforces Upsolve Radar](#4-global-contest-hub--codeforces-upsolve-radar)
     - [A. Global Contest Hub Schedule (`contest_hub_global_schedule.png`)](#a-global-contest-hub-schedule-contest_hub_global_schedulepng)
     - [B. Codeforces Upsolve Radar (`upsolve_radar_challenges.png`)](#b-codeforces-upsolve-radar-upsolve_radar_challengespng)
-  - [6. Extension Settings & Customization Studio](#6-extension-settings--customization-studio)
+  - [5. Extension Settings & Customization Studio](#5-extension-settings--customization-studio)
     - [A. GitHub Repository Integration (`settings_github_integration.png`)](#a-github-repository-integration-settings_github_integrationpng)
     - [B. Editor Preferences & Themes (`settings_preferences.png`)](#b-editor-preferences--themes-settings_preferencespng)
     - [C. Starter Templates & Boilerplates (`settings_starter_templates.png`)](#c-starter-templates--boilerplates-settings_starter_templatespng)
     - [D. Remote Code Execution Engine (`settings_code_execution.png`)](#d-remote-code-execution-engine-settings_code_executionpng)
     - [E. Contest Hub Platform Filters (`settings_contest_hub_filters.png`)](#e-contest-hub-platform-filters-settings_contest_hub_filterspng)
-  - [7. Automated GitHub Synchronization Hierarchy](#7-automated-github-synchronization-hierarchy)
+  - [6. Automated GitHub Synchronization Hierarchy](#6-automated-github-synchronization-hierarchy)
     - [A. Repository Root Directory Architecture (`github_repo_structure.png`)](#a-repository-root-directory-architecture-github_repo_structurepng)
     - [B. Codeforces Division Hierarchy (`github_codeforces_divisions.png`)](#b-codeforces-division-hierarchy-github_codeforces_divisionspng)
     - [C. CSES 6-Category Hierarchy](#c-cses-6-category-hierarchy)
     - [D. Synced Problem Directory & Markdown Archive (`github_synced_problem_folder.png`)](#d-synced-problem-directory--markdown-archive-github_synced_problem_folderpng)
 - [🎛️ Exhaustive Button & Control Directory](#️-exhaustive-button--control-directory)
   - [A. Monaco IDE Workstation Buttons & Controls](#a-monaco-ide-workstation-buttons--controls)
-  - [B. Codeforces Problemset Filter & Floating Controls](#b-codeforces-problemset-filter--floating-controls)
-  - [C. Contest Hub Controls & Calendar Buttons](#c-contest-hub-controls--calendar-buttons)
-  - [D. Upsolve Radar Controls & Problem Launcher](#d-upsolve-radar-controls--problem-launcher)
-  - [E. Extension Popup Dashboard Controls](#e-extension-popup-dashboard-controls)
-  - [F. Settings & Customization Controls](#f-settings--customization-controls)
+  - [B. Contest Hub Controls & Calendar Buttons](#b-contest-hub-controls--calendar-buttons)
+  - [C. Upsolve Radar Controls & Problem Launcher](#c-upsolve-radar-controls--problem-launcher)
+  - [D. Extension Popup Dashboard Controls](#d-extension-popup-dashboard-controls)
+  - [E. Settings & Customization Controls](#e-settings--customization-controls)
 - [🔬 Core Engineering Deep-Dives](#-core-engineering-deep-dives)
   - [1. Atomic 3-Commit Git Database Trees API Architecture](#1-atomic-3-commit-git-database-trees-api-architecture)
   - [2. Animated Multi-Platform Portfolio Engine & Vector SMIL Geometry](#2-animated-multi-platform-portfolio-engine--vector-smil-geometry)
-  - [3. Codeforces Problemset Filter with Live MutationObserver & Bi-Directional Storage](#3-codeforces-problemset-filter-with-live-mutationobserver--bi-directional-storage)
-  - [4. CSES 6-Category Classification & DataTransfer Form Injection](#4-cses-6-category-classification--datatransfer-form-injection)
-  - [5. 30-Day Activity Graph & Dual-Series Analytics Engine](#5-30-day-activity-graph--dual-series-analytics-engine)
-  - [6. Honest Streak & Daily Momentum Engine](#6-honest-streak--daily-momentum-engine)
-  - [7. Difficulty Distribution Donut & Category Geometry](#7-difficulty-distribution-donut--category-geometry)
-  - [8. Intelligent C++ Formatter with AST & Literal Shielding](#8-intelligent-c-formatter-with-ast--literal-shielding)
-  - [9. CPH Multi-Testcase Runner & Telemetry](#9-cph-multi-testcase-runner--telemetry)
-  - [10. Automated GitHub Synchronization & Repository Hierarchy](#10-automated-github-synchronization--repository-hierarchy)
-  - [11. Judge DOM Scraping & One-Click Auto-Submit Bridges](#11-judge-dom-scraping--one-click-auto-submit-bridges)
-  - [12. Security Architecture, Local-First Storage & AST Obfuscation](#12-security-architecture-local-first-storage--ast-obfuscation)
+  - [3. CSES 6-Category Classification & DataTransfer Form Injection](#3-cses-6-category-classification--datatransfer-form-injection)
+  - [4. 30-Day Activity Graph & Dual-Series Analytics Engine](#4-30-day-activity-graph--dual-series-analytics-engine)
+  - [5. Honest Streak & Daily Momentum Engine](#5-honest-streak--daily-momentum-engine)
+  - [6. Difficulty Distribution Donut & Category Geometry](#6-difficulty-distribution-donut--category-geometry)
+  - [7. Intelligent C++ Formatter with AST & Literal Shielding](#7-intelligent-c-formatter-with-ast--literal-shielding)
+  - [8. CPH Multi-Testcase Runner & Telemetry](#8-cph-multi-testcase-runner--telemetry)
+  - [9. Automated GitHub Synchronization & Repository Hierarchy](#9-automated-github-synchronization--repository-hierarchy)
+  - [10. Judge DOM Scraping & One-Click Auto-Submit Bridges](#10-judge-dom-scraping--one-click-auto-submit-bridges)
+  - [11. Security Architecture, Local-First Storage & AST Obfuscation](#11-security-architecture-local-first-storage--ast-obfuscation)
 - [🌐 Browser Compatibility (Google Chrome, Microsoft Edge, Brave)](#-browser-compatibility-google-chrome-microsoft-edge-brave)
 - [🚀 Installation & Quick Start Guide](#-installation--quick-start-guide)
 - [⚙️ Configuration & GitHub Setup](#️-configuration--github-setup)
@@ -174,12 +168,10 @@ CodeSync Pro bridges this entire workflow into a cohesive, high-performance work
 - **Extension Branding:** Updated subtitle across all headers and popups to `CF · AC · LC · CSES · TP → GitHub`.
 - **Settings Customization:** Added CSES handle and user profile configuration in Extension Settings.
 
-### 4. Codeforces Problemset Persistent Filter & Tags Accordion
-- **Single Rating Selector (800 – 3500):** Practice exact problem rating targets across all 28 individual Codeforces ratings with quick rating jump pills (`All`, `800`, `1000`, `1200`, `1400`, `1600`, `1800`, `2000`, `2200`, `2400`).
-- **Collapsible 37-Tag Accordion:** Filter by any of the 37 official Codeforces tags with real-time tag search, live selected count badge, and flexible matching modes (Match ANY vs Match ALL).
-- **Practice Controls:** 1-click "Hide solved problems" and "Include unrated problems" toggles.
-- **Floating Controls & Banner:** Glassmorphic floating button with live status indicator and match counter badge, plus a 32px slim status banner above the Codeforces problem table.
-- **Universal Storage Sync:** Live `MutationObserver` on Codeforces problem tables keeps floating controls and extension settings 100% synchronized across tabs.
+### 4. Robust IDE Tab Synchronization & Persistent Testcases Architecture
+- **Tab & Navigation Immunity:** Monaco IDE workspace stays locked to your active challenge when navigating across standings, submissions, or problemset tabs in Codeforces or other judges.
+- **Persistent Local Testcase Storage:** Custom testcases (added via `+ New Testcase`, edited samples, or captured from the Stress Tester) are saved persistently per-problem in `chrome.storage.local` and never wiped on refresh or tab switch.
+- **Dedicated Scratchpad Separation:** Standalone Scratchpad and problem-bound workspaces are cleanly separated with explicit user close controls.
 
 ### 5. Production Compilation & Client-Side Obfuscation
 - **Protected Codebase:** All extension scripts compiled via an AST-based string-array encoding and control-flow pipeline targeting `browser-no-eval` for complete Manifest V3 compliance and tamper-proof execution.
@@ -348,31 +340,7 @@ Comprehensive local testing engine inspired by Competitive Programming Helper (C
 
 ---
 
-### 2. Codeforces Problemset Persistent Filter & Tags Accordion
-
-CodeSync Pro features a persistent filtering engine integrated directly inside Codeforces settings and on `codeforces.com/problemset`.
-
-#### A. Seamless Settings Integration & Single Rating Selector
-- **Embedded in Codeforces Settings:** Located right inside the Codeforces card in Extension Settings (`options.html`), preserving logical grouping without extra clutter.
-- **Pure Single Rating Selector (800 – 3500):** Practice exact problem rating targets across all 28 individual Codeforces ratings: `800`, `900`, `1000`, `1100`, `1200`, `1300`, `1400`, `1500`, `1600`, `1700`, `1800`, `1900`, `2000`, `2100`, `2200`, `2300`, `2400`, `2500`, `2600`, `2700`, `2800`, `2900`, `3000`, `3100`, `3200`, `3300`, `3400`, `3500`.
-- **Quick Rating Jump Pills:** Fast 1-click jump buttons (`All`, `800`, `1000`, `1200`, `1400`, `1600`, `1800`, `2000`, `2200`, `2400`).
-- **Practice Exclusively Unsolved Problems:** 1-click toggle automatically detects accepted problems on Codeforces and submissions already synced to GitHub.
-- **Include Unrated Problems Toggle:** Choose whether unrated/gym challenges appear in your feed.
-
-#### B. Collapsible 37-Tag Accordion with Real-Time Search
-- **Optional & Separate:** Tags are tucked neatly inside an expandable accordion (`Filter by Tags (Optional) ▾`).
-- **All 37 Official Tags Supported:** `implementation`, `math`, `greedy`, `brute force`, `constructive algorithms`, `dp`, `data structures`, `graphs`, `dfs and similar`, `trees`, `sortings`, `binary search`, `two pointers`, `strings`, `number theory`, `combinatorics`, `geometry`, `bitmasks`, `probabilities`, `shortest paths`, `divide and conquer`, `dsu`, `flows`, `graph matchings`, `matrices`, `ternary search`, `meet-in-the-middle`, `expression parsing`, `hashing`, `string suffix structures`, `fft`, `chinese remainder theorem`, `2-sat`, `games`, `interactive`, `schedules`, and `*special`.
-- **Live Search & Badge Counter:** Instant tag search, one-click Clear, and a live counter badge displaying selected tags when collapsed.
-- **Flexible Matching Modes:** Switch easily between **Match ANY (OR)** and **Match ALL (AND)**.
-
-#### C. Floating Glassmorphic Control & Active Status Banner
-- **Floating Control Button:** Sleek button (`🎯 Filter Problems`) on `codeforces.com/problemset` with a live status dot and match counter (`visible / total`).
-- **32px Status Banner:** Compact banner above the table showing active filter criteria with instant "Edit Filter" and "Clear" shortcuts.
-- **Live MutationObserver:** Automatically reapplies filters during table sorting, pagination, or dynamic updates.
-
----
-
-### 3. Animated Multi-Platform Portfolio Engine & Profile Suite
+### 2. Animated Multi-Platform Portfolio Engine & Profile Suite
 
 Transform your solutions repository (`github.com/<username>/<repo>`) into a self-updating, high-resolution vector portfolio!
 
@@ -417,7 +385,7 @@ Pri8899/CP/
 
 ---
 
-### 4. Extension Popup Dashboard & Live Analytics
+### 3. Extension Popup Dashboard & Live Analytics
 
 The extension popup provides an instant command center for inspecting sync health, practice streaks, and submission trends.
 
@@ -472,7 +440,7 @@ Automated detection and synchronization of un-archived submissions:
 
 ---
 
-### 5. Global Contest Hub & Codeforces Upsolve Radar
+### 4. Global Contest Hub & Codeforces Upsolve Radar
 
 Never miss an upcoming contest and turn past contest failures into rapid learning opportunities.
 
@@ -504,7 +472,7 @@ Intelligent upsolving engine tailored for competitive growth:
 
 ---
 
-### 6. Extension Settings & Customization Studio
+### 5. Extension Settings & Customization Studio
 
 Customize every aspect of your coding and synchronization experience via the glassmorphic Settings page.
 
@@ -579,7 +547,7 @@ Tailor your contest schedule notifications:
 
 ---
 
-### 7. Automated GitHub Synchronization Hierarchy
+### 6. Automated GitHub Synchronization Hierarchy
 
 CodeSync Pro automatically generates a clean, structured competitive programming portfolio on your GitHub account.
 
@@ -662,22 +630,7 @@ Each problem solution directory contains:
 
 ---
 
-### B. Codeforces Problemset Filter & Floating Controls
-
-| Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
-| :--- | :--- | :--- | :--- |
-| **Floating Filter Button** | `🎯 Filter Problems` | CF Problemset Floating | Floating glassmorphic button with live status dot and match counter (`visible / total`). |
-| **Single Rating Selector** | Dropdown (800–3500) | Filter Modal & Settings | Selects specific rating target across all 28 official Codeforces ratings. |
-| **Quick Rating Pills** | `All`, `800`, `1000` ... | Filter Modal & Settings | Instant 1-click rating selection for rapid level jumps. |
-| **Tag Search Bar** | `Search tags...` | Tags Accordion | Real-time filter filtering 37 official Codeforces tags by name. |
-| **Tag Matching Mode** | `Match ANY` / `Match ALL` | Tags Accordion | Toggles between logical OR (any selected tag matches) and logical AND (all selected tags must match). |
-| **Hide Solved Toggle** | Checkbox | Filter Modal & Settings | Filters out challenges with Accepted verdict on Codeforces or already synced to GitHub. |
-| **Include Unrated Toggle**| Checkbox | Filter Modal & Settings | Toggles visibility of unrated and gym challenges. |
-| **Clear Filter Button** | `Clear Filter` | Status Banner & Modal | Instantly resets all filters and restores full Codeforces problemset. |
-
----
-
-### C. Contest Hub Controls & Calendar Buttons
+### B. Contest Hub Controls & Calendar Buttons
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
@@ -690,7 +643,7 @@ Each problem solution directory contains:
 
 ---
 
-### D. Upsolve Radar Controls & Problem Launcher
+### C. Upsolve Radar Controls & Problem Launcher
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
@@ -701,7 +654,7 @@ Each problem solution directory contains:
 
 ---
 
-### E. Extension Popup Dashboard Controls
+### D. Extension Popup Dashboard Controls
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
@@ -716,7 +669,7 @@ Each problem solution directory contains:
 
 ---
 
-### F. Settings & Customization Controls
+### E. Settings & Customization Controls
 
 | Button / Control | Visual Label / Icon | Location | Action & Technical Behavior |
 | :--- | :--- | :--- | :--- |
@@ -785,16 +738,7 @@ The portfolio suite is rendered entirely as pure client-side SVG vectors:
 
 ---
 
-### 3. Codeforces Problemset Filter with Live MutationObserver & Bi-Directional Storage
-
-The Codeforces filtering engine maintains live synchronization across open tabs and extension settings:
-- **DOM MutationObserver:** Watches the problem table container (`.problems`). Dynamic sorting, pagination, and DOM re-renders trigger automatic re-filtering within 16ms without page reloads.
-- **Storage Observer:** Listens for `chrome.storage.onChanged` events. Adjusting ratings or tags in Extension Settings immediately applies across all open Codeforces tabs in real time.
-- **Smart Solved Detection:** Cross-references problem indices against local `syncLog` and user submission caches to accurately filter out solved problems.
-
----
-
-### 4. CSES 6-Category Classification & DataTransfer Form Injection
+### 3. CSES 6-Category Classification & DataTransfer Form Injection
 
 - **6-Category Classification:** CSES problems are classified across the 6 official sections:
   1. `Introductory Problems`
@@ -807,7 +751,7 @@ The Codeforces filtering engine maintains live synchronization across open tabs 
 
 ---
 
-### 5. 30-Day Activity Graph & Dual-Series Analytics Engine
+### 4. 30-Day Activity Graph & Dual-Series Analytics Engine
 
 The submission activity visualizer renders a dual-series SVG line chart over a rolling 30-day temporal window:
 
@@ -828,7 +772,7 @@ The submission activity visualizer renders a dual-series SVG line chart over a r
 
 ---
 
-### 6. Honest Streak & Daily Momentum Engine
+### 5. Honest Streak & Daily Momentum Engine
 
 Unlike standard trackers that falsely award streaks for any page visit or failed run, CodeSync Pro enforces an **Honest Streak** guarantee:
 
@@ -839,7 +783,7 @@ $$\text{Streak Day Status} = \begin{cases} \text{Checked (Green)} & \text{if } \
 
 ---
 
-### 7. Difficulty Distribution Donut & Category Geometry
+### 6. Difficulty Distribution Donut & Category Geometry
 
 The difficulty donut visualizes the cumulative problem distribution using SVG stroke-dasharray geometry:
 
@@ -849,7 +793,7 @@ The difficulty donut visualizes the cumulative problem distribution using SVG st
 
 ---
 
-### 8. Intelligent C++ Formatter with AST & Literal Shielding
+### 7. Intelligent C++ Formatter with AST & Literal Shielding
 
 CodeSync Pro includes an in-browser C++ formatter built specifically for competitive programmers. Standard formatters often corrupt ASCII problem headers or string literals. CodeSync Pro implements a four-phase protection pipeline:
 
@@ -860,7 +804,7 @@ CodeSync Pro includes an in-browser C++ formatter built specifically for competi
 
 ---
 
-### 9. CPH Multi-Testcase Runner & Telemetry
+### 8. CPH Multi-Testcase Runner & Telemetry
 
 Inspired by the Competitive Programming Helper (CPH) desktop workflow, the workstation features an integrated local test runner:
 
@@ -870,7 +814,7 @@ Inspired by the Competitive Programming Helper (CPH) desktop workflow, the works
 
 ---
 
-### 10. Automated GitHub Synchronization & Repository Hierarchy
+### 9. Automated GitHub Synchronization & Repository Hierarchy
 
 Every time an Accepted verdict is achieved, CodeSync Pro archives the solution directly to GitHub:
 
@@ -880,7 +824,7 @@ Every time an Accepted verdict is achieved, CodeSync Pro archives the solution d
 
 ---
 
-### 11. Judge DOM Scraping & One-Click Auto-Submit Bridges
+### 10. Judge DOM Scraping & One-Click Auto-Submit Bridges
 
 - **Codeforces:** 1-Click direct submission from CodeSync IDE! Injects submission code into the contest/problemset submit form, selects the G++23 compiler, and executes the submit with zero delay.
 - **AtCoder:** 1-Click direct submission from CodeSync IDE! Detects language selection and populates the task submission form.
@@ -890,7 +834,7 @@ Every time an Accepted verdict is achieved, CodeSync Pro archives the solution d
 
 ---
 
-### 12. Security Architecture, Local-First Storage & AST Obfuscation
+### 11. Security Architecture, Local-First Storage & AST Obfuscation
 
 - **Local-First Storage:** All preferences, tokens, and solution drafts are encrypted and stored in your browser's local `chrome.storage.local`.
 - **Zero External Telemetry:** CodeSync Pro communicates only with official judge APIs, GitHub REST API, and selected sandbox compilers.
@@ -982,7 +926,6 @@ git clone https://github.com/Pri8899/CodeSync-Pro-Extension.git
 | **IDE says "No Problem Active"** | Tab not detected on a supported problem URL | Navigate to a valid problem on CF, AC, CSES, LC, or Toph, then click the `🔄` Refresh icon. |
 | **Testcase Execution Timeout** | Infinite loop or slow server response | Verify base cases in code; increase timeout slider in Settings to 5-10s. |
 | **Streak shows Red ✕** | Only failed attempts recorded today | Solve at least one problem with an Accepted verdict to maintain your streak. |
-| **Codeforces Filter not applying** | Problem table dynamically refreshed | Click the floating `🎯 Filter Problems` button or reload the problemset page. |
 
 ---
 
