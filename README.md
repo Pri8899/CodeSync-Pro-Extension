@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://developer.chrome.com/docs/extensions/mv3/intro/"><img src="https://img.shields.io/badge/Manifest-V3-2f81f7?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Manifest V3" /></a>
-  <a href="https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.5.0"><img src="https://img.shields.io/badge/Version-v4.5.0-3b82f6?style=for-the-badge" alt="Version v4.5.0" /></a>
+  <a href="https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v5.0.0"><img src="https://img.shields.io/badge/Version-v5.0.0-3b82f6?style=for-the-badge" alt="Version v5.0.0" /></a>
   <a href="https://www.google.com/chrome/"><img src="https://img.shields.io/badge/Chrome-110%2B-4285f4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Google Chrome" /></a>
   <a href="https://www.microsoft.com/edge"><img src="https://img.shields.io/badge/Edge-110%2B-0078d7?style=for-the-badge&logo=microsoft-edge&logoColor=white" alt="Microsoft Edge" /></a>
   <a href="https://brave.com/"><img src="https://img.shields.io/badge/Brave-Supported-fb542b?style=for-the-badge&logo=brave&logoColor=white" alt="Brave Browser" /></a>
@@ -27,6 +27,7 @@
 ## 📖 Table of Contents
 
 - [🌟 Overview](#-overview)
+- [🚀 What's New in v5.0.0](#-whats-new-in-v500)
 - [🚀 What's New in v4.5.0](#-whats-new-in-v450)
 - [🚀 What's New in v4.4.0](#-whats-new-in-v440)
 - [🖼️ Visual UI Tour & Complete Screenshot Directory](#️-visual-ui-tour--complete-screenshot-directory)
@@ -120,6 +121,25 @@ CodeSync Pro bridges this entire workflow into a cohesive, high-performance work
 │  • Automatic division & category archiving across CF, CSES, AtCoder, LeetCode, Toph  │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 🚀 What's New in v5.0.0
+
+### 1. Rock-Solid 3-Commit GitHub Sync & Contribution Reliability
+- **True 3-Commit Separation (`ques`, `code`, `stats`):** Hardened the commit pipeline with per-problem and per-repository synchronization locks so overlapping sync triggers never collide, skip files, or collapse commits into zero-diff updates.
+- **Verified Identity & Real Contribution Graph Credit:** Automatically resolves your verified primary GitHub account email (with noreply fallback) and embeds unique portfolio card timestamps so all three commits count cleanly toward your GitHub contribution graph.
+- **Automatic Stats Card Retry Protection:** Transient network hiccups on the stats update commit are automatically retried and scheduled cleanly rather than silently dropped.
+
+### 2. Multi-Judge Detection, Contest Tracker & Dashboard Fixes
+- **Improved Submission & Language Accuracy across All 5 Judges:** Eliminated false-positive verdict triggers, status-page Cloudflare rate spikes, premature AtCoder `WJ` captures, LeetCode Monaco indentation corruption, Toph inequality text corruption, and CSES sample/metadata parsing edge cases.
+- **Live Contest Calendar Restored:** Upgraded the contest tracker to live CLIST v4 and LeetCode GraphQL feeds with platform filtering and direct upsolve problem launch into the IDE.
+- **Unified Popup, Heatmap & Donut Analytics:** Fixed timezone-aware streak calculation, excluded skipped/unsolved items from stats, deduplicated solved counts, and aligned platform breakdowns across every view.
+
+### 3. IDE, Stress Tester & Security Overhaul
+- **Sandboxed JavaScript Test Generator & Faster Stress Runs:** JavaScript generators run inside an isolated MV3 sandbox with strict timeout protection, and every stress run respects user timeouts.
+- **More Languages, Live Preferences & Smarter Diagnostics:** Added C alongside C++20/17, Python 3.12, Kotlin, Rust, Go, Java, JavaScript, and TypeScript across the IDE, Side Panel, and Settings, with live Vim Mode toggle and font size synchronization.
+- **Hardened Execution & Clean Browser Extension Health:** Fixed Paiza/Judge0/Piston status handling, escaped rendered markdown/UI surfaces against HTML injection, and eliminated unnecessary service-worker error noise.
 
 ---
 
@@ -860,7 +880,7 @@ CodeSync Pro is built on the standard **Manifest V3** specification and fully te
 
 ### Option 1: 1-Click Release Package (Recommended)
 
-1. Download **`CodeSync Pro.zip`** from the latest [GitHub Release (v4.5.0)](https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v4.5.0).
+1. Download **`CodeSync Pro.zip`** from the latest [GitHub Release (v5.0.0)](https://github.com/Pri8899/CodeSync-Pro-Extension/releases/tag/v5.0.0).
 2. Unzip the file (extracts to `CodeSync Pro/`).
 3. Open your browser and navigate to:
    - **Brave:** `brave://extensions`
